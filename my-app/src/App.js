@@ -8,6 +8,7 @@ import ContactPage from './pages/contactpage';
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Header />
       <Routes>
@@ -18,6 +19,7 @@ function App() {
       </Routes>
   
     </BrowserRouter>
+  
   );
 }
 
