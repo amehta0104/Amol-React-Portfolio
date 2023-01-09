@@ -47,7 +47,7 @@ p{
 
 .wrapper {
   display : block;
- 
+
   padding: 1em;
   margin: 0 auto;
   
@@ -142,8 +142,24 @@ box-shadow: rgba(0, 0, 0, 0.493) 1px 1px 3px 2px ;
 
 }
 
+ul, li{
+  text-decoration: none;
+  text-decoration-style: none;
+}
 
-
+.social-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 5px;
+ 
+  text-decoration: none;
+  list-style: none;
+}
 
 
 nav ul{
@@ -157,6 +173,44 @@ img{
   max-width: 100%;
 max-height: 860px;
   object-fit: cover;
+  border-radius: 5px;
+  box-shadow: #3f3f3f4f 1px 1px 3px 2px ;
+}
+
+.inline-flex{
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  flex-wrap: wrap;
+  
+
+
+  
+}
+
+.inline-flex button{
+  margin: 1em;
+  
+  
+}
+
+.double-button{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+ 
+  border-radius: 5px;
+ 
+  text-decoration: none;
+  list-style: none;
+}
+
+.double-button button{
+  margin: 0 0.5em 0 0.05em;
   border-radius: 5px;
   box-shadow: #3f3f3f4f 1px 1px 3px 2px ;
 }
