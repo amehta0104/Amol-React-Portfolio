@@ -40,7 +40,7 @@ const getProjectById = () => {
   return { project, loading, error };
 };
 
-function ProjectDetail() {
+function ProjectCardCopy() {
   const { project, loading, error } = getProjectById();
   const { id } = useParams();
   const projectById = { ...project[id - 1]}
@@ -69,4 +69,4 @@ function ProjectDetail() {
   );
 }
 
-export default ProjectDetail;
+export default ProjectCardCopy;

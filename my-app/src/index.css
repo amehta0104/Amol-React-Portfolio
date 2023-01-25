@@ -15,6 +15,10 @@ body {
   
 }
 
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -128,6 +132,24 @@ box-shadow: rgba(0, 0, 0, 0.493) 1px 1px 3px 2px ;
   border-radius: 5px;
 }
 
+.home-project-card-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+box-shadow: rgba(0, 0, 0, 0.493) 1px 1px 3px 2px ;
+  background-color: #3f3f3f00;
+  text-align: center;
+  transition: all 3s ease-in-out;
+
+  border-radius: 10px;
+ background-position: left;
+ 
+
+  margin: 1em;
+  border-radius: 5px;
+}
+
 .card-body{
   /* two column layout, 70% for text, and 30% for image on desktop, and stacked vertically on mobile*/
   display: flex;
@@ -215,3 +237,38 @@ max-height: 860px;
   box-shadow: #3f3f3f4f 1px 1px 3px 2px ;
 }
 
+.project-detail-content{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  margin: 0 auto;
+
+
+
+}
+
+.bio { 
+  font-size: 1.2rem;
+}
+
+.image { 
+ height: 460px;
+ transition: all 3s ease-in-out;
+}
+
+.mask{
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  transition: all 3s ease-in-out;
+  border-radius: 5px;
+  box-shadow: #3f3f3f4f 1px 1px 3px 2px ;
+  margin: 0 auto;
+  background-color: #3f3f3f00;
+}

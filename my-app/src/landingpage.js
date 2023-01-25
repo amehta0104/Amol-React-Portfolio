@@ -3,7 +3,7 @@ import Hero from './components/hero';
 import './index.css';
 import ProjectGrid from './components/projectgrid';
 import Button from '@mui/material/Button';
-
+import ProjectHoverCard from './components/project-hover-card';
 import Box from '@mui/material/Box';
 import MiniContact from './components/mini-contact';
 

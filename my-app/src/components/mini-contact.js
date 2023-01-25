@@ -15,12 +15,8 @@ function MiniContact() {
           <div className="inline-flex"> 
               <h2>Let's Work Together</h2>
               <Button variant="outlined" color="primary" > Contact Me</Button>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-            Curabitur venenatis, nulla id tincidunt ultrices, quam metus tincidunt
-            lacus, eu posuere nisi lectus at nulla.
-          </p>
+         
+          
          <ul className="social-bar">
             <li> <FontAwesomeIcon icon={faFacebook} size='2x'/></li>
             <li> <FontAwesomeIcon icon={faTwitter} size='2x'/></li>
@@ -32,7 +28,7 @@ function MiniContact() {
 
                 
             </ul>
-          
+            </div>
         </div>
     </Box>
   );
