@@ -14,6 +14,7 @@ import {  faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import  Axios  from "axios";
+import { Container } from "@mui/system";
 import { useState } from "react";
 
 
@@ -45,27 +46,31 @@ function ProjectDetail() {
   const { id } = useParams();
   const projectById = { ...project[id - 1]}
   return (
-    <div className="project-detail">
-      <div className="project-detail-content">
-        <div className="project-detail-image">
-          <img src={projectById.image} alt={projectById.title} />
-        </div>
-        <div className="project-detail-text">
-          <h2>{projectById.title}</h2>
-          <p>{projectById.description}</p>
-       
-        </div>
-        <div className="project-detail-links">
-          <h3> Made with:</h3>
-            <a href={projectById.link} target="_blank">
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
-            <a href={projectById.github} target="_blank">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
+    <Container maxWidth="xl">
+      <div className="wrapper">
+        <div className="project-detail">
+          <div className="project-detail-content">
+            <div className="project-detail-image">
+              <img src={projectById.image} alt={projectById.title} />
+            </div>
+            <div className="project-detail-text">
+              <h2>{projectById.title}</h2>
+              <p>{projectById.description}</p>
+      
+            </div>
+            <div className="project-detail-links">
+              <h3> Made with:</h3>
+                <a href={projectById.link} target="_blank">
+                  <FontAwesomeIcon color="white" icon={faExternalLinkAlt} />
+                </a>
+                <a href={projectById.github} target="_blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </div>
           </div>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

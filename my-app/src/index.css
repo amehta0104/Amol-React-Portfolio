@@ -45,15 +45,13 @@ a{
 }
 
 
-p{
-  color: rgb(255, 255, 255);
-}
 
 .wrapper {
   display : block;
 
-  padding: 1em;
+  padding: 2em;
   margin: 0 auto;
+  
   
 }
 
@@ -65,6 +63,7 @@ p{
  margin: 0 auto;
   border-radius: 5px;
   box-shadow: #3f3f3f27 1px 1px 3px 2px ;
+  gap: 2em;
 
 
  
@@ -90,7 +89,7 @@ p{
   /* grid layout with minmax */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+  grid-gap: 2em;
   padding: 1em;
   margin: 0 auto;
   
@@ -271,4 +270,39 @@ max-height: 860px;
   box-shadow: #3f3f3f4f 1px 1px 3px 2px ;
   margin: 0 auto;
   background-color: #3f3f3f00;
+}
+
+.img-container-hover {
+  position: relative;
+}
+
+.img-hover{
+  width:100%;
+}
+
+.card-body {
+  position: absolute;
+
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  
+  color:rgba(255, 255, 255, 0);
+  width: 90%;
+  height: 90%;
+
+}
+
+.card-body.visible {
+  visibility: visible;
+  background-color:rgba(0, 0, 0, 0.8);
+  color:white;
+  text-align:center;
+ 
+ 
 }

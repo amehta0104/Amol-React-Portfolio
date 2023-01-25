@@ -6,8 +6,10 @@
     "title" : "Uniken",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
     "link": "https://www.uniken.com/",
-    "apps": "['wordpress', 'html', 'javascript', 'css']",
+    "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
+
     "image": "/assests/uniken.png"
+   
 },
 
 {
@@ -15,7 +17,7 @@
     "title" : "Sams Blog",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
     "link": "https://www.samsblog.com/",
-    "apps": "['wordpress', 'html', 'javascript', 'css']",
+    "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/samsblog.png"
 },
 
@@ -24,7 +26,7 @@
     "title" : "Sentinel Home Services",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
     "link": "https://www.sentinelhomeservices.com/",
-    "apps": "['wordpress', 'html', 'javascript', 'css']",
+    "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/sentinel.png"
 },
 
@@ -33,7 +35,7 @@
     "title" : "Closet Pioneers",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
     "link": "https://www.closetpioneers.com/",
-    "apps": "['wordpress', 'html', 'javascript', 'css']",
+    "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/closet.png"
 }
 

@@ -9,6 +9,7 @@ import { Axios } from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import React from 'react';
+import AboutMe from './pages/about';
 
 
 
@@ -27,7 +28,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-  
+    <Route path="/about" element={<AboutMe />} />
         <Route path="/projectpage" element={<ProjectPage />} />
         {/* <Route path="/resume" element={<ResumePage />} />
         <Route path="/contact" element={<ContactPage />} /> */}

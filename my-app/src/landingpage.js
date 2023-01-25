@@ -17,7 +17,7 @@ import ProjectPage from './pages/projectpage';
 
 function LandingPage() {
   return (
-    <div className='wrapper'> 
+    <div > 
 
      
       <main>
