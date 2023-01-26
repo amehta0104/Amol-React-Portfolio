@@ -11,6 +11,7 @@ import { render } from "@testing-library/react";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import {Paper } from '@mui/material';
 import { Container } from "@mui/system";
+import ProjectDetail from "../pages/project-detail";
 
 function Project(props) {
   
@@ -49,6 +50,11 @@ const ProjectHoverCard = () => {
                     setApps(val.apps);
                   }
                   }
+                  onClick = {() => { 
+                 
+
+                    window.location.href = `/project-detail/${val.id}`;
+                  }}
                   onMouseLeave={() => {setHover(null); setApps([]); }}
                 >
                   <img src={val.image} alt="" className="img-hover"/>
@@ -58,7 +64,7 @@ const ProjectHoverCard = () => {
                  
 
                       <div className="social-bar">
-                        {console.log(`${apps[3]}`)}
+                       
                       <Link to = {/project-detail/ + val.id} className="button">Details</Link>
 
                         </div>

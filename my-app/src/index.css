@@ -11,12 +11,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #141414;
-  color : white;
+  color : white !important;
   
 }
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+#outlined-basic{
+  color: white !important;
+  
 }
 
 
@@ -51,7 +56,7 @@ a{
 
   padding: 2em;
   margin: 0 auto;
-  
+  color: #ffffff;
   
 }
 

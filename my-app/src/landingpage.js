@@ -13,6 +13,7 @@ import Header from './components/header';
 import { render } from '@testing-library/react';
 
 import ProjectPage from './pages/projectpage';
+import SocialBar from './components/social-bar';
 
 
 function LandingPage() {
@@ -29,7 +30,7 @@ function LandingPage() {
         
        
         <ProjectGrid />
-        <MiniContact />
+       <SocialBar />
             
         </main>
         

@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import  Axios  from "axios";
 import { Container } from "@mui/system";
 import { useState } from "react";
+import SocialBar from "../components/social-bar";
 
 
 
@@ -41,12 +42,12 @@ const getProjectById = () => {
   return { project, loading, error };
 };
 
-function ProjectDetail() {
+function ProjectDetail(props) {
   const { project, loading, error } = getProjectById();
   const { id } = useParams();
   const projectById = { ...project[id - 1]}
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl"><>
       <div className="wrapper">
         <div className="project-detail">
           <div className="project-detail-content">
@@ -56,20 +57,21 @@ function ProjectDetail() {
             <div className="project-detail-text">
               <h2>{projectById.title}</h2>
               <p>{projectById.description}</p>
-      
+
             </div>
             <div className="project-detail-links">
               <h3> Made with:</h3>
-                <a href={projectById.link} target="_blank">
-                  <FontAwesomeIcon color="white" icon={faExternalLinkAlt} />
-                </a>
-                <a href={projectById.github} target="_blank">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </div>
+              <a href={projectById.link} target="_blank">
+                <FontAwesomeIcon color="white" icon={faExternalLinkAlt} />
+              </a>
+              <a href={projectById.github} target="_blank">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <SocialBar /></> 
     </Container>
   );
 }
