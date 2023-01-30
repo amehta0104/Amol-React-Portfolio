@@ -16,6 +16,7 @@ import AboutMe from './pages/about';
 
 import Project from './pages/project-detail';
 import ProjectDetail from './pages/project-detail';
+import { CssBaseline } from '@mui/material';
 
 
 
@@ -24,19 +25,23 @@ import ProjectDetail from './pages/project-detail';
 function App() {
   return (
     
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-    <Route path="/about" element={<AboutMe />} />
-        <Route path="/projectpage" element={<ProjectPage />} />
-       
-        <Route path="/contact" element={<ContactPage />} /> 
-        <Route path="/project-detail/:id" element={<ProjectDetail />} />
-       
-      </Routes>
-  
-    </BrowserRouter>
+    <React.Fragment>
+      <CssBaseline enableColorScheme/>
+      {
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+      <Route path="/about" element={<AboutMe />} />
+          <Route path="/projectpage" element={<ProjectPage />} />
+      
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/project-detail/:id" element={<ProjectDetail />} />
+      
+        </Routes>
+      </BrowserRouter>
+      }
+    </React.Fragment>
   
   );
 }

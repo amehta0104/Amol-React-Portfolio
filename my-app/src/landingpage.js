@@ -29,7 +29,7 @@ function LandingPage() {
 
         
        
-        <ProjectGrid />
+        <ProjectHoverCard />
        <SocialBar />
             
         </main>

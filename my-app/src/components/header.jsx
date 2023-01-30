@@ -15,7 +15,9 @@ import { Home } from '@mui/icons-material';
 
 function Header() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      marginBottom: 5,
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon  sx={{flexGrow:0, display: { xs: 'flex', md: 'flex' }, mr: 1 }} />

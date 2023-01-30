@@ -11,37 +11,67 @@
  import Paper from '@mui/material/Paper';
  import Box from '@mui/material/Box';
  import Grid from '@mui/material/Grid';
- 
+ import ButtonGroup from '@mui/material/ButtonGroup';
+ import CodeIcon from '@mui/icons-material/Code';
  import Typography from '@mui/material/Typography';
  import { createTheme, ThemeProvider } from '@mui/material/styles';
+ import IconButton from '@mui/material/IconButton';
+    import DeleteIcon from '@mui/icons-material/Delete';
+    import SendIcon from '@mui/icons-material/Send';
  
 import '../index.css';
-import { Container } from '@mui/system';
+
+import { Container} from '@mui/system';
 
 
     function Hero() {
+
+        
+       
         return (
-            <Container maxWidth="xl">
-         <div className='wrapper'>
-             <div className='hero'>
-                    <img src={require("../assests/profilepic.png")} alt="Your Name" />
-                    <Box sx={{
-                        typography: 'h5',
-                    }}>
-                        <p className='bio'>
-                            A highly skilled and motivated web developer with experience
-                            in creating custom websites using CMS platforms, as well as troubleshooting and maintaining servers. Proficient in various programming languages and operating systems, with strong problem-solving and communication skills. Seeking a challenging and rewarding opportunity to utilize my skills and experience to make a
-                            positive impact on a dynamic organization.
-             
-                        </p>
-                        <Button variant="contained" href="/projectpage">View My Work</Button>
-                        {/* button to go to projects page */}
-                    </Box>
-                </div>
-         </div>
-            </Container>
-     );
-        }
+            
+                <Paper elevation={3} height='100vh' maxWidth='100%' 
+                sx={{
+                    backgroundImage: "url('/assests/uniken.png')",
+                    backgroundClip: "content-box",
+                    backgroundSize: "cover",
+                    backgroundPosition: "'bottom',",
+                    backgroundRepeat: "no-repeat",
+                    color: "white",
+                    }} >
+                        <Box height='100vh'  justifyContent='center' alignItems='center' display='flex'
+                        flexDirection='column' sx={{
+ backdropFilter: "blur(52px)",
+ backgroundBlendMode: "overlay",
+
+ padding: 2, 
+
+                        }}>
+                            <Typography textAlign='center' variant="h1" paragraph  fontWeight={600} component="div" >
+ Amol's Portfolio
+                            </Typography>
+                            <Typography textAlign='center' variant="h6" paragraph fontWeight={300} gutterBottom component="div" >
+                                Full Stack Web Developer and Enthusiest of all things tech.
+                            </Typography>
+                            <Typography variant='button' marginTop={2}>
+                                <ButtonGroup sx={{
+                             
+                                }} variant='contained' color='primary' component="div"  aria-label="contained primary button group">
+                                    <Button  variant="contained" startIcon={<CodeIcon />}>
+ Projects
+</Button>
+<Button variant="contained" endIcon={<SendIcon />}>
+  Contact Me
+</Button>
+                                </ButtonGroup>
+                            </Typography>
+                        </Box>
+                    </Paper>
+      
+
+
+        );
+    }
 
     export default Hero;
 

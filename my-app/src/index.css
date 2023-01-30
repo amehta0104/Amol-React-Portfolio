@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #141414;
   color : white !important;
+  background-color: #141414 !important;
   
 }
 
@@ -52,9 +53,10 @@ a{
 
 
 .wrapper {
-  display : block;
+  display : flex;
 
-  padding: 2em;
+justify-content: center;
+ padding: 3em;
   margin: 0 auto;
   color: #ffffff;
   
@@ -63,7 +65,7 @@ a{
 /* css for a container module that holds the hero */
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   padding: 1em;
  margin: 0 auto;
   border-radius: 5px;
