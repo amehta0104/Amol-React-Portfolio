@@ -23,20 +23,22 @@ return(
     
  
         
-        <Container>
+      
 
             <Paper
                 component="form"
                 sx={{
+                    height: '100vh',
+                    
                     p: '1em',
                     display: 'flex',
                     flexDirection: 'column',
                     gap: 1,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: 'auto',
+                    width: '100%',
                     margin: ' 0 auto',
-                    backgroundColor: '#1e1e1e',
+                    backgroundColor: '#121212',
                     color: '#ffffff',
                     overrides: {
                         MuiInputLabel: {
@@ -50,7 +52,7 @@ return(
             >
                 <h1 style={{ color: '#ffffff' }}>Contact Me</h1>
                 <TextField
-                    sx={{ m: 1, color: '#ffffff', width: '45ch' }}
+                    sx={{ m: 1, color: '#ffffff',  }}
                     id="outlined-basic"
                     label="First Name"
                     variant="filled"
@@ -58,21 +60,21 @@ return(
                     className='text-field'
                     InputLabelProps={{ style: { color: '#ffffff' } }} />
                 <TextField
-                    sx={{ m: 1, width: '45ch' }}
+                    sx={{ m: 1,  }}
                     id="outlined-basic"
                     label="Last Name"
                     variant="filled"
                     color="primary"
                     InputLabelProps={{ style: { color: '#ffffff' } }} />
                 <TextField
-                    sx={{ m: 1, width: '45ch' }}
+                    sx={{ m: 1, }}
                     id="outlined-basic"
                     label="Email"
                     variant='filled'
                     color="primary"
                     InputLabelProps={{ style: { color: '#ffffff' } }} />
                 <TextField
-                    sx={{ m: 1, width: '45ch' }}
+                    sx={{ m: 1, }}
                     id="outlined-basic"
                     label="Message"
                     variant="filled"
@@ -80,26 +82,26 @@ return(
                     multiline
                     InputLabelProps={{ style: { color: '#ffffff' } }} />
                 <Button
-                    sx={{ m: 1, width: '25ch' }}
-                    variant="contained"
+                    sx={{ m: 1,  }}
+                    variant="outlined"
                     color="primary"
                 >
                     Submit
                 </Button>
                 <Box sx={ {
-
+                   
                     marginTop: '1em'
 
                 }}>
                     
-            <SocialBar />
+       
         </Box>
             </Paper>
 
 
 
-
-        </Container>
+          
+    
         
         
      

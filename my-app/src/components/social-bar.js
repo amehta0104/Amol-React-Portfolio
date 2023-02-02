@@ -47,16 +47,16 @@ export default function SocialBar(){
             
                     gap: '1rem',
                 }} >
-                <Fab color="primary" aria-label="add">
+                <Fab size='small' color="primary" aria-label="add">
                   <TwitterIcon />
             
                 </Fab>
             
-                <Fab color="warning" aria-label="add"> <InstagramIcon /></Fab>
-                <Fab color="info" aria-label="add"> <LinkedInIcon /> </Fab>
-                <Fab color="secondary" aria-label="add"> <GitHubIcon /> </Fab>
-                <Fab color="error" aria-label="add"> <YouTubeIcon /> </Fab>
-                <Fab color='primary' > <Email /> </Fab>
+                <Fab size='small' color="warning" aria-label="add"> <InstagramIcon /></Fab>
+                <Fab size='small' color="info" aria-label="add"> <LinkedInIcon /> </Fab>
+                <Fab size='small' color="secondary" aria-label="add"> <GitHubIcon /> </Fab>
+                <Fab size='small' color="error" aria-label="add"> <YouTubeIcon /> </Fab>
+                <Fab size='small' color='primary' > <Email /> </Fab>
                 </Box>
             </Container>
         </div>

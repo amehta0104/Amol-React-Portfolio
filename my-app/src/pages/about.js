@@ -15,21 +15,45 @@ import {Paper } from '@mui/material';
 function AboutMe() {
 
         return (
-            <Container maxWidth="md">
-                <div className="wrapper">
-                    <div className="about-me">
-                        <div className="about-me-content">
-                            <div className="about-me-image">
-                                <img src="/assests/closet.png" alt="me" />
-                            </div>
-                            <div className="about-me-text">
-                                <h2>About Me</h2>
-                                <p>My name is Michael and I am a full stack web developer. I have a passion for learning and I am always looking for new ways to improve my skills. I am currently working on a few projects that I hope to have completed soon. I am also looking for a job as a web developer. If you are interested in hiring me, please contact me.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </Container>
+
+            <Paper elevation={3} height='100vh' maxWidth='100%' 
+            sx={{
+                marginTop: 0,
+                backgroundImage: "url('/assests/gg.png')",
+                backgroundClip: "content-box",
+                backgroundSize: "cover",
+                backgroundPosition: "'bottom',",
+                backgroundRepeat: "no-repeat",
+                color: "white",
+                }} >
+
+<Box height='100vh'  justifyContent='center' alignItems='center' display='flex'
+                        flexDirection='column' sx={{
+ backdropFilter: "blur(52px)",
+ backgroundBlendMode: "overlay",
+
+ padding: 2, 
+
+                        }}>
+           
+             
+                      
+                      
+                            <Container>
+                                <Typography variant='h2'>
+                                    About Me
+                                </Typography>
+                                <Typography variant='paragraph' paragraph>
+                                    <p>My name is Michael and I am a full stack web developer. I have a passion for learning and I am always looking for new ways to improve my skills. I am currently working on a few projects that I hope to have completed soon. I am also looking for a job as a web developer. If you are interested in hiring me, please contact me.</p>
+                                </Typography>
+                            </Container>
+                 
+                        </Box>
+
+          
+          
+        </Paper>
+ 
         );
 
     

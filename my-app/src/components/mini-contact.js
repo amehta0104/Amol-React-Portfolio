@@ -11,13 +11,18 @@ import SocialBar from "./social-bar";
 
 function MiniContact() {
   return (
-    <Box>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
         <div className="mini-contact container">
           <div className="inline-flex"> 
               <h2>Let's Work Together</h2>
               <Button variant="outlined" color="primary" > Contact Me</Button>
          
-       <SocialBar />
+     
             </div>
         </div>
     </Box>

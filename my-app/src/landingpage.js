@@ -1,50 +1,42 @@
-import React from 'react';
-import Hero from './components/hero';
-import './index.css';
-import ProjectGrid from './components/projectgrid';
-import Button from '@mui/material/Button';
-import ProjectHoverCard from './components/project-hover-card';
-import Box from '@mui/material/Box';
-import MiniContact from './components/mini-contact';
+import React from "react";
+import Hero from "./components/hero";
+import "./index.css";
+import ContactPage from './pages/contactpage'
+import { Box } from "@mui/material";
+import Container from "@mui/material/Container";
+
+import ProjectHoverCard from "./components/project-hover-card";
+import {Paper} from "@mui/material";
+import MiniContact from "./components/mini-contact";
+import AboutMe from "./pages/about";
+import Typography from '@mui/material/Typography';
 
 
- import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/header';
-import { render } from '@testing-library/react';
-
-import ProjectPage from './pages/projectpage';
-import SocialBar from './components/social-bar';
-
+import SocialBar from "./components/social-bar";
 
 function LandingPage() {
   return (
-    <div > 
-
-     
+    <div>
       <main>
+        <Hero />
+<Box>
+  
+          <div id="hidden" className="hidden">
+            <ProjectHoverCard />{" "}
+      <AboutMe />{" "}
+          </div>
+</Box>
 
-        
-          <Hero />
-       
+  
+          <div id="contact">
+                 <ContactPage />
+          </div>
+    
 
-        
-       
-        <ProjectHoverCard />
-       <SocialBar />
-            
-        </main>
-        
-        
-       
+      
+      </main>
     </div>
-    );
+  );
 }
 
 export default LandingPage;
-
-
-
-
-
-
-

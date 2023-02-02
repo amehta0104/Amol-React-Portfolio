@@ -18,20 +18,26 @@
  import IconButton from '@mui/material/IconButton';
     import DeleteIcon from '@mui/icons-material/Delete';
     import SendIcon from '@mui/icons-material/Send';
- 
+    import LandingPage from '../landingpage';
+
 import '../index.css';
 
 import { Container} from '@mui/system';
+import ProjectHoverCard from './project-hover-card';
+import { isElement, renderIntoDocument } from 'react-dom/test-utils';
+import SocialBar from './social-bar';
+
 
 
     function Hero() {
+ //div id hidden from landing page element
 
-        
-       
+
         return (
             
                 <Paper elevation={3} height='100vh' maxWidth='100%' 
                 sx={{
+                    marginTop: 0,
                     backgroundImage: "url('/assests/uniken.png')",
                     backgroundClip: "content-box",
                     backgroundSize: "cover",
@@ -56,11 +62,31 @@ import { Container} from '@mui/system';
                             <Typography variant='button' marginTop={2}>
                                 <ButtonGroup sx={{
                              
-                                }} variant='contained' color='primary' component="div"  aria-label="contained primary button group">
-                                    <Button  variant="contained" startIcon={<CodeIcon />}>
+                                }} variant='contained' color='primary' 
+                                component="div"  aria-label="contained primary button group">
+
+                                    <Button
+                                    onClick={() => {
+                                        document.getElementById('hidden').style.display = 'block';
+                                     document.getElementById('hidden').scrollIntoView({behavior: 'smooth'})
+                                     document.getElementById('hidden').style.visibility = 'visible';
+                                     ;
+                                        
+
+                                      }}  variant="contained" startIcon={<CodeIcon />}>
+
  Projects
 </Button>
-<Button variant="contained" endIcon={<SendIcon />}>
+<Button onClick={() => {
+                                        document.getElementById('contact').style.display = 'block';
+                                     document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
+                                     document.getElementById('contact').style.visibility = 'visible';
+                                     ;
+                                        
+
+                                      }
+}
+ variant="contained" endIcon={<SendIcon />}>
   Contact Me
 </Button>
                                 </ButtonGroup>

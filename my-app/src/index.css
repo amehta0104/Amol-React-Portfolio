@@ -50,6 +50,17 @@ a{
   color: rgb(13, 0, 85);
 }
 
+#hidden{
+  display: none;
+  visibility: hidden;
+
+}
+
+#contact{
+  display: none;
+  visibility: hidden;
+  
+}
 
 
 .wrapper {

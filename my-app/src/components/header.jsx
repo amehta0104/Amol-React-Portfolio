@@ -16,7 +16,7 @@ import { Home } from '@mui/icons-material';
 function Header() {
   return (
     <AppBar position="static" sx={{
-      marginBottom: 5,
+      marginBottom: 0,
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
