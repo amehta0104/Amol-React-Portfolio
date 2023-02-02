@@ -25,14 +25,13 @@ function LandingPage() {
             <ProjectHoverCard />{" "}
       <AboutMe />{" "}
           </div>
-</Box>
+
 
   
           <div id="contact">
                  <ContactPage />
           </div>
-    
-
+          </Box>
       
       </main>
     </div>
