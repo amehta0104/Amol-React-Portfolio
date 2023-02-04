@@ -18,47 +18,34 @@ function AboutMe() {
         return (
 
             <div class="wrapper">
-                <Container maxWidth='xl'>
-                    <Paper elevation={3} padding={2}
-                    sx={{
-                        marginTop: 0,
-                       backgroundColor: "rgba(25, 118, 210, 0.79)",
-                        backgroundClip: "content-box",
-                        backgroundSize: "cover",
-                        backgroundPosition: "'bottom',",
-                        backgroundRepeat: "no-repeat",
-                        color: "white",
-                    
-                        }} >
-                    
-                   
-                    
-                    
-                    
-                                    <Container maxWidth='xl' sx={{
-                    padding:2
-                                    }}>
-                                        <Typography variant='h3'>
-                                            About Me
-                                        </Typography>
-                                        <Typography variant='body1' paragraph>
-                                            My name is amol and I am a full stack developer. 
-                                            I have been working as a software engineer since 2020. I have
-                                            worked on a variety of projects, from web apps to mobile apps.
-                                            I am currently working on a project called "The Social Network" which is a social media app.
-                                            I am also working on a project called "The Social Network" which is a social media app.
-                                            
-                                        </Typography>
-                    
-                                    </Container>
-                    
-                    
-                         
-                    
-                    
-                    
-                            </Paper>
-                </Container>
+                
+                        <Container maxWidth='xl'>
+                            <Paper elevation={3} padding={2}
+                            sx={{
+                                marginTop: 0,
+                               backgroundColor: "rgba(25, 118, 210, 0.09)",
+                                backgroundClip: "content-box",
+                                backgroundSize: "cover",
+                                backgroundPosition: "'bottom',",
+                                backgroundRepeat: "no-repeat",
+                                color: "white",
+                                }} >
+                                               
+                                                    <Typography variant='h3'>
+                                                        About Me
+                                                    </Typography>
+                                                    <Typography variant='body1' sx={{
+                                                        marginTop: 2,
+                                                    }} paragraph>
+                                                        My name is amol and I am a full stack developer.
+                                                        I have been working as a software engineer since 2020. I have
+                                                        worked on a variety of projects, from web apps to mobile apps.
+                                                        I am currently working on a project called "The Social Network" which is a social media app.
+                                                        I am also working on a project called "The Social Network" which is a social media app.
+                                                    </Typography>
+                                                
+                                    </Paper>
+                        </Container>
             </div>
  
         );

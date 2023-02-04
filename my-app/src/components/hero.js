@@ -19,6 +19,8 @@
     import DeleteIcon from '@mui/icons-material/Delete';
     import SendIcon from '@mui/icons-material/Send';
     import LandingPage from '../landingpage';
+ import { useState, useEffect } from'react';
+import { styled } from '@mui/material/styles';
 
 import '../index.css';
 
@@ -31,6 +33,11 @@ import SocialBar from './social-bar';
 
     function Hero() {
  //div id hidden from landing page element
+ const [checked, setChecked] = React.useState(false);
+
+ const handleChange = () => {
+   setChecked((prev) => !prev);
+ };
 
 
         return (
@@ -69,8 +76,8 @@ import SocialBar from './social-bar';
                                     onClick={() => {
                                         document.getElementById('hidden').style.display = 'block';
                                      document.getElementById('hidden').scrollIntoView({behavior: 'smooth'})
-                                     document.getElementById('hidden').style.visibility = 'visible';
-                                     ;
+                                        document.getElementById('hidden').style.visibility = 'visible';
+                                     
                                         
 
                                       }}  variant="contained" startIcon={<CodeIcon />}>

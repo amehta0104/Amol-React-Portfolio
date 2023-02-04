@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import React from 'react';
 import AboutMe from './pages/about';
+import { ThemeProvider } from '@mui/material/styles';
 
 
 
@@ -18,30 +19,35 @@ import Project from './pages/project-detail';
 import ProjectDetail from './pages/project-detail';
 import { CssBaseline } from '@mui/material';
 
-
+import theme from './pages/theme';
+import Footer from './components/footer';
 
 
 
 function App() {
+
   return (
     
-    <React.Fragment>
-      <CssBaseline enableColorScheme/>
-      {
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-      <Route path="/about" element={<AboutMe />} />
-          <Route path="/projectpage" element={<ProjectPage />} />
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <CssBaseline enableColorScheme/>
+        {
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutMe />} />
+            <Route path="/projectpage" element={<ProjectPage />} />
       
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/project-detail/:id" element={<ProjectDetail />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/project-detail/:id" element={<ProjectDetail />} />
       
-        </Routes>
-      </BrowserRouter>
-      }
-    </React.Fragment>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+        }
+      </React.Fragment>
+    </ThemeProvider>
   
   );
 }

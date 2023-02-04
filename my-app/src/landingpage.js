@@ -11,7 +11,7 @@ import MiniContact from "./components/mini-contact";
 import AboutMe from "./pages/about";
 import Typography from '@mui/material/Typography';
 
-
+import theme from "./pages/theme";
 import SocialBar from "./components/social-bar";
 
 function LandingPage() {
@@ -19,11 +19,11 @@ function LandingPage() {
     <div>
       <main>
         <Hero />
-<Box>
+
   
           <div id="hidden" className="hidden">
             <ProjectHoverCard />{" "}
-      <AboutMe />{" "}
+
           </div>
 
 
@@ -31,7 +31,9 @@ function LandingPage() {
           <div id="contact">
                  <ContactPage />
           </div>
-          </Box>
+
+          {/* <AboutMe />{" "} */}
+          
       
       </main>
     </div>

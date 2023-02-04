@@ -18,7 +18,9 @@ function Header() {
     <AppBar position="static" sx={{
       marginBottom: 0,
     }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{
+        padding : 0,
+      }}>
         <Toolbar disableGutters>
           <AdbIcon  sx={{flexGrow:0, display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
           <Typography

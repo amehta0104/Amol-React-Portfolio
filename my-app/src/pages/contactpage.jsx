@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import MiniContact from '../components/mini-contact';
 import SocialBar from '../components/social-bar';
-
+import theme from '../pages/theme';
 
 
 export default function ContactPage(){
@@ -15,6 +15,11 @@ export default function ContactPage(){
             color: "white"
         }
     }
+
+
+    
+
+    
 
 return(
 // dark mode form with first name, last name, email, message fields and a blue submit button
@@ -25,7 +30,7 @@ return(
         
       
 
-            <Paper
+            <Paper 
                 component="form"
                 sx={{
                     height: '100vh',
@@ -38,7 +43,7 @@ return(
                     justifyContent: 'center',
                     width: '100%',
                     margin: ' 0 auto',
-                    backgroundColor: '#121212',
+                    backgroundColor: (theme.palette.primary.bg),
                     color: '#ffffff',
                     overrides: {
                         MuiInputLabel: {
