@@ -28,15 +28,15 @@ export default function SocialBar(){
     return(
         
         <div class="wrapper">
-            <Container  sx={ {
+            <Container maxWidth='xs' sx={ {
                 display: 'flex',
-     
+     maxHeight: '50px',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 p: '2rem',
             }}>
-                <Typography variant='subtitle1' sx={{color: 'primary.main', fontWeight: 'bold', mb: '1rem'}}>Follow Me on Social Media</Typography>
+               
 
                 <Box sx={{
                     display: 'flex',

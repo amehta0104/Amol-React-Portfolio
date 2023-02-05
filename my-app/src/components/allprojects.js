@@ -3,16 +3,24 @@ import Axios from "axios";
 import "../index.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+faReact,
+faJs,
+faHtml5,
+faCss3Alt,
+} from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-
+import { render } from "@testing-library/react";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { Paper, Typography, Grid, Button } from "@mui/material";
-
+import ProjectDetail from "../pages/project-detail";
 import theme from "../pages/theme";
-
+import Box from "@mui/material/Box";
 import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 
-const ProjectHoverCard = () => {
+const AllProjects = () => {
 const [projects, setProjects] = useState([]);
 const [hover, setHover] = useState(null);
 const { id } = useParams();
@@ -29,9 +37,9 @@ return (
 <motion.div
  initial={{opacity:0}}
  animate={{opacity:1}}
- transition={{duration:0.5, ease: 'easeInOut'}}
+
   exit={{opacity:0}}
- 
+  transition={{delay: 0.5, duration:0.5, ease: 'easeInOut'}}
 className="wrapper">
 
   <Grid container sx={{ height: "100%", padding:2 }} maxWidth="lg">
@@ -83,20 +91,7 @@ className="wrapper">
   </Grid>
   );
   })}
-  <Grid item sx={{
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "transparent",
-    color: theme.palette.primary.main,
-  }} xs={12} md={12} lg={12} xl={12} >
-    <Button href="/projectpage" size="large" variant="text" sx={{ margin: 1, backgroundColor: theme.palette.primary.bg, color: theme.palette.primary.contrastText }}>
-      View All
-  
-      </Button>
-  </Grid>
+
   </Grid>
 
 
@@ -109,4 +104,4 @@ className="wrapper">
 );
 };
 
-export default ProjectHoverCard;
+export default AllProjects;

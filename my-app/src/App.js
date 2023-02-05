@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom';
 import React from 'react';
 import AboutMe from './pages/about';
 import { ThemeProvider } from '@mui/material/styles';
-
+//import {motion as m } from 'framer-motion';
 
 
 
@@ -21,34 +21,43 @@ import { CssBaseline } from '@mui/material';
 
 import theme from './pages/theme';
 import Footer from './components/footer';
+import {AnimatePresence, motion } from 'framer-motion/dist/framer-motion';
 
 
-
-function App() {
+function App(router) {
 
   return (
     
-    <ThemeProvider theme={theme}>
-      <React.Fragment>
-        <CssBaseline enableColorScheme/>
-        {
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<AboutMe />} />
-            <Route path="/projectpage" element={<ProjectPage />} />
+    <AnimatePresence>
+      <motion.div 
+      initial = {{opacity:0}}
+      animate = {{opacity:1}}
+      transition ={{ duration: 0.5, ease:'easeInOut' }} 
+      exit = {{opacity:0 , transition: {duration: 0.5, ease:'easeInOut'}}}
+      >
+        <ThemeProvider theme={theme}>
+          <React.Fragment>
+            <CssBaseline enableColorScheme/>
+            {
+            <BrowserRouter>
+              <Header />
+              <Routes>
       
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/project-detail/:id" element={<ProjectDetail />} />
+                  <Route path="/" element={<LandingPage  />} />
+                          <Route path="/about" element={<AboutMe />} />
+                  <Route path="/projectpage" element={<ProjectPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/project-detail/:id" element={<ProjectDetail />} />
       
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-        }
-      </React.Fragment>
-    </ThemeProvider>
-  
+      
+              </Routes>
+              <Footer />
+            </BrowserRouter>
+            }
+          </React.Fragment>
+        </ThemeProvider>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

@@ -13,8 +13,9 @@ import ProjectGrid from "../components/projectgrid";
 import { Box } from "@mui/material";
 
 import ProjectHoverCard from "../components/project-hover-card";
-
-
+import Github from "../components/github";
+import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
+import AllProjects from "../components/allprojects";
 
 
 
@@ -23,25 +24,35 @@ import ProjectHoverCard from "../components/project-hover-card";
 function ProjectPage() {
 
   return (
-    <Box className="project-page" sx={ 
-      {
-    
+    <AnimatePresence>
+      <motion.div
+      initial={{ opacity: 0,  }}
+      animate={{ opacity: 1, }}
+      exit={{ opacity: 0 }}
+      transition= {{  duration: 0.5, ease: "easeOut" }}
+     
+      style={{
+      overflow: "hidden",
+      }}
+      class="wrapper">
+        <Box className="project-page" sx={
+          {
       
       
-        boxShadow: 1,
-        p: 2,
-        m: 2,
-    
-        display: 'flex',
-
-
-
-      }
-    }>
- 
-< ProjectHoverCard />
-
-    </Box>
+      
+            boxShadow: 1,
+            p: 2,
+            m: 2,
+      
+            display: 'block',
+          }
+        }>
+      
+ <AllProjects />
+        <Github />
+        </Box>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

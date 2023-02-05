@@ -7,7 +7,8 @@ import Button from '@mui/material/Button';
 import MiniContact from '../components/mini-contact';
 import SocialBar from '../components/social-bar';
 import theme from '../pages/theme';
-
+import { Grid, Hidden } from '@mui/material';
+import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 
 export default function ContactPage(){
     const styles = {
@@ -28,80 +29,111 @@ return(
     
  
         
-      
 
-            <Paper 
-                component="form"
-                sx={{
-                    height: '100vh',
-                    
-                    p: '1em',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '100%',
-                    margin: ' 0 auto',
-                    backgroundColor: (theme.palette.primary.bg),
-                    color: '#ffffff',
-                    overrides: {
-                        MuiInputLabel: {
-                            root: {
-                                color: "rgba(255, 255, 255, 0.87)",
-                            },
-                        },
-                    },
-                }}
-                elevation={3}
-            >
-                <h1 style={{ color: '#ffffff' }}>Contact Me</h1>
-                <TextField
-                    sx={{ m: 1, color: '#ffffff',  }}
-                    id="outlined-basic"
-                    label="First Name"
-                    variant="filled"
-                    color="primary"
-                    className='text-field'
-                    InputLabelProps={{ style: { color: '#ffffff' } }} />
-                <TextField
-                    sx={{ m: 1,  }}
-                    id="outlined-basic"
-                    label="Last Name"
-                    variant="filled"
-                    color="primary"
-                    InputLabelProps={{ style: { color: '#ffffff' } }} />
-                <TextField
-                    sx={{ m: 1, }}
-                    id="outlined-basic"
-                    label="Email"
-                    variant='filled'
-                    color="primary"
-                    InputLabelProps={{ style: { color: '#ffffff' } }} />
-                <TextField
-                    sx={{ m: 1, }}
-                    id="outlined-basic"
-                    label="Message"
-                    variant="filled"
-                    color="primary"
-                    multiline
-                    InputLabelProps={{ style: { color: '#ffffff' } }} />
-                <Button
-                    sx={{ m: 1,  }}
-                    variant="outlined"
-                    color="primary"
-                >
-                    Submit
-                </Button>
-                <Box sx={ {
-                   
-                    marginTop: '1em'
-
-                }}>
-                    
-       
-        </Box>
-            </Paper>
+    <AnimatePresence>
+        <motion.div
+        initial = {{ opacity: 0 }}
+        animate = {{ opacity: 1 }}
+        transition = {{ duration: 0.5, ease: 'easeIneaseOut' }}
+        exit = {{ opacity: 0 }}
+        className="wrapper">
+            <Grid container maxWidth='lg'  sx={{
+        
+              height: '760px',
+              padding: 2,
+        
+            }} >
+                      <Grid item xs={12} md={4} lg={4} xl={4}>
+                          <Paper
+                              component="form"
+                              sx={{
+                                height: "100%",
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                backgroundColor: theme.palette.primary.main,
+                                color: theme.palette.primary.main,
+                                  overrides: {
+                                      MuiInputLabel: {
+                                          root: {
+                                              color: "rgba(255, 255, 255, 0.87)",
+                                          },
+                                      },
+                                  },
+                              }}
+                              elevation={2}
+                          >
+                              <h1 style={{ color: '#ffffff' }}>Contact Me</h1>
+                              </Paper>
+                      </Grid>
+                          <Grid item xs={12} md={8} lg={8} xl={8}>
+                          <Paper component="form"
+                              sx={{
+                                height: "100%",
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                  backgroundColor: (theme.palette.primary.bg),
+                                  color: '#ffffff',
+                                  overrides: {
+                                      MuiInputLabel: {
+                                          root: {
+                                              color: "rgba(255, 255, 255, 0.87)",
+                                          },
+                                      },
+                                  },
+                              }}
+                              elevation={14}
+                          >
+                              <TextField
+                                  sx={{ m: 1, color: '#ffffff',  }}
+                                  id="outlined-basic"
+                                  label="First Name"
+                                  variant="filled"
+                                  color="primary"
+                                  className='text-field'
+                                  InputLabelProps={{ style: { color: '#ffffff' } }} />
+                              <TextField
+                                  sx={{ m: 1,  }}
+                                  id="outlined-basic"
+                                  label="Last Name"
+                                  variant="filled"
+                                  color="primary"
+                                  InputLabelProps={{ style: { color: '#ffffff' } }} />
+                              <TextField
+                                  sx={{ m: 1, }}
+                                  id="outlined-basic"
+                                  label="Email"
+                                  variant='filled'
+                                  color="primary"
+                                  InputLabelProps={{ style: { color: '#ffffff' } }} />
+                              <TextField
+                                  sx={{ m: 1, }}
+                                  id="outlined-basic"
+                                  label="Message"
+                                  variant="filled"
+                                  color="primary"
+                                  multiline
+                                  InputLabelProps={{ style: { color: '#ffffff' } }} />
+                              <Button
+                                  sx={{ m: 1,  }}
+                                  variant="outlined"
+                                  color="primary"
+                              >
+                                  Submit
+                              </Button>
+                            </Paper>
+                          </Grid>
+                          <Box sx={ {
+                              marginTop: '1em'
+                          }}>
+                  </Box>
+        
+            </Grid>
+        </motion.div>
+    </AnimatePresence>
 
 
 
