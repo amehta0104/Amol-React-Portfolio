@@ -7,22 +7,24 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Paper, Typography, Grid, Button } from "@mui/material";
-
+import AllProjects from "./allprojects";
 import theme from "../pages/theme";
 
 import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 
 const ProjectHoverCard = () => {
-const [projects, setProjects] = useState([]);
-const [hover, setHover] = useState(null);
-const { id } = useParams();
-const [apps, setApps] = useState([]);
 
-useEffect(() => {
+
+ const [projects, setProjects] = useState([]);
+const [hover, setHover] = useState(null);
+ const { id } = useParams();
+ const [apps, setApps] = useState([]);
+
+
+ useEffect(() => {
 Axios.get("http://localhost:3000/projects.json").then((response) => {
-setProjects(response.data);
-});
-}, []);
+setProjects(response.data); });
+ }, []);
 
 return (
   <AnimatePresence mode={'wait'}>
