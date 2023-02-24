@@ -21,7 +21,7 @@ function Header(router) {
       <AppBar key={router.pathname} position="static" sx={{
         marginBottom: 0,
       }}>
-        <Container maxWidth="xl" sx={{
+        <Container maxWidth="lg" sx={{
           padding : 0,
         }}>
           <Toolbar disableGutters>

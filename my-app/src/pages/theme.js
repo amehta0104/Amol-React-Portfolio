@@ -14,7 +14,8 @@ const theme = createTheme({
         main: "#3A8DF4",
         bg: "#141414",
         text: "#FFFFFF",
-        secondary : "#333"
+        secondary : "#333",
+        black : "#111"
 
       },
       // primary: 
@@ -31,7 +32,7 @@ const theme = createTheme({
         fontSize: "2rem"
       }
     },
-    Paper: {
+    paper: {
       backgroundColor: "#1E1E1E",
       color: "#FFFFFF"
     },

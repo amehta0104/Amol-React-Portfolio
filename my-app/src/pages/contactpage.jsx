@@ -37,13 +37,13 @@ return(
         transition = {{ duration: 0.5, ease: 'easeIneaseOut' }}
         exit = {{ opacity: 0 }}
         className="wrapper">
-            <Grid container maxWidth='lg'  sx={{
+            <Grid container maxWidth='md'  sx={{
         
               height: '760px',
-              padding: 2,
+                padding: 2,
         
             }} >
-                      <Grid item xs={12} md={4} lg={4} xl={4}>
+                      <Grid item xs={12} >
                           <Paper
                               component="form"
                               sx={{
@@ -52,7 +52,7 @@ return(
                                 flexDirection: "column",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                backgroundColor: theme.palette.primary.main,
+                                backgroundColor: theme.palette.primary.bg,
                                 color: theme.palette.primary.main,
                                   overrides: {
                                       MuiInputLabel: {
@@ -67,7 +67,7 @@ return(
                               <h1 style={{ color: '#ffffff' }}>Contact Me</h1>
                               </Paper>
                       </Grid>
-                          <Grid item xs={12} md={8} lg={8} xl={8}>
+                          <Grid item xs={12} >
                           <Paper component="form"
                               sx={{
                                 height: "100%",

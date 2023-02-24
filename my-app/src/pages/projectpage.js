@@ -16,25 +16,17 @@ import ProjectHoverCard from "../components/project-hover-card";
 import Github from "../components/github";
 import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 import AllProjects from "../components/allprojects";
-
+import GitHubCards from "../components/GitHubCards";
+import emptyCache from "../components/emptyCache";
 
 
 
 
 function ProjectPage() {
-
+  const [repo, setRepo] = useState([]);
   return (
-    <AnimatePresence>
-      <motion.div
-      initial={{ opacity: 0,  }}
-      animate={{ opacity: 1, }}
-      exit={{ opacity: 0 }}
-      transition= {{  duration: 0.5, ease: "easeOut" }}
-     
-      style={{
-      overflow: "hidden",
-      }}
-      class="wrapper">
+   
+      <div class="wrapper">
         <Box className="project-page" sx={
           {
       
@@ -48,11 +40,11 @@ function ProjectPage() {
           }
         }>
       
- <AllProjects />
-        <Github />
+ <ProjectHoverCard />
+        <GitHubCards />
         </Box>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+
   );
 }
 

@@ -20,12 +20,12 @@ import { useState } from "react";
 
 
 
-const getProjectById = () => {
+const getProjectById = async () => {
   const [project, setProject] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+   useEffect(() => {
     Axios.get("http://localhost:3000/projects.json")
       .then((response) => {
         setProject(response.data);
