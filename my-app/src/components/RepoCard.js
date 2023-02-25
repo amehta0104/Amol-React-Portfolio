@@ -2,6 +2,8 @@ import React from "react";
 
 import theme from "../pages/theme";
 import {
+  Button,
+  ButtonGroup,
   Paper,
   Card,
   CardHeader,
@@ -19,19 +21,18 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 0,
     marginTop: "10px",
     marginBottom: "10px",
-    display: "flex",
+   
     justifyContent: "center",
     alignItems: "center",
    
   },
   card: {
 
-    width: "100%",
-    height: "100%",
-   
-    
+    margin: "auto",
+   minWidth: "100%",
+    padding: "1em",
     transition: "0.3s",
-    minHeight: "270px",
+
     borderRadius: ".625rem!important",
     boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
     "&:hover": {
@@ -68,8 +69,11 @@ const RepoCard = ({ repo }) => {
   const classes = useStyles();
   return (
    
-      <Grid item xs={12} sm={6} lg={4} className={classes.root}>
-   <Paper elevation={3} sx={{display: 'flex' ,  padding: 0.3, backgroundColor: purple[500],}}>
+      <Grid item xs={12} sm={6} lg={4} sx={{
+        padding : 0 ,
+        height: "100%",
+      }} className={classes.root}>
+   <Paper elevation={3} sx={{  padding: 0.225, backgroundColor: purple[500],}}>
        
             <Card className={classes.card}>
        
@@ -78,7 +82,7 @@ const RepoCard = ({ repo }) => {
                     <Avatar aria-label="recipe" className={classes.avatar}>
                       <span
                         className="octicon octicon-repo"
-                        style={{ fontSize: "20px" }}
+                        style={{ fontSize: "15px" }}
                       ></span>
                     </Avatar>
                   }
@@ -152,7 +156,7 @@ const RepoCard = ({ repo }) => {
        
                 </Card>
      </Paper>
-       
+   
           </Grid>
    
 

@@ -15,6 +15,7 @@ import Github from "./components/github";
 import {AnimatePresence, motion} from "framer-motion/dist/framer-motion";
 import { Container, Typography } from "@mui/material";
 import theme from "./pages/theme";
+import AboutMeGrid from "./components/aboutMeGrid";
 
 function LandingPage({Component , pageProps, router}) {
   return (
@@ -28,7 +29,7 @@ function LandingPage({Component , pageProps, router}) {
           exit={{opacity:0}}>
             <main>
               <Hero />
-                <motion.div  initial={{opacity:0}}
+                <motion.div   initial={{opacity:0}}
          animate={{opacity:1}}
          transition={{duration:1, ease: 'easeInOut'}}
           exit={{opacity:0}} id="hidden" >
@@ -37,13 +38,14 @@ function LandingPage({Component , pageProps, router}) {
        
         
         
-        <Paper elevation={3} sx={{backgroundColor: theme.palette.primary.black, display: 'flex', justifyContent:'center', alignContent: 'center', flexDirection: 'column'}} >
-        <Typography variant="h3" component="h3" 
-        style={{textAlign: "center", color: "white", marginTop: "50px", marginBottom: "50px"}}>
-          Live Projects
-          </Typography>
-          <AllProjects />
-        </Paper>
+       
+     <Container maxWidth='md' sx={{
+      padding: 1 ,
+     }}>
+       
+         <AllProjects />
+     </Container>
+        
                    {/* <ProjectHoverCard  />{" "} */}
         
         
@@ -56,18 +58,17 @@ function LandingPage({Component , pageProps, router}) {
          transition={{duration:1, ease: 'easeInOut'}}
           exit={{opacity:0}}>
         
-        <Typography variant="h3" component="h3" 
-        style={{textAlign: "center", color: "white", marginTop: "50px", marginBottom: "50px"}}>
-          GitHub Projects
-          </Typography>
-         <GitHubCards />
+       
+         <Container maxWidth='md'>
+           <GitHubCards />
+         </Container>
             </motion.div>
                 <motion.div  initial={{opacity:0}}
          animate={{opacity:1}}
          transition={{duration:1, ease: 'easeInOut'}}
           exit={{opacity:0}} id="contact">
-                       
-                         <Container maxWidth='xl'>
+{/*                        
+                         <Container maxWidth='lg'>
                            <Grid container spacing={2} >
                            <Grid item xs={12} sm={6}  >
                            <AboutMe />
@@ -77,10 +78,12 @@ function LandingPage({Component , pageProps, router}) {
                                <ContactPage />
                              </Grid>
                            </Grid>
-                         </Container>
-             
+                         </Container> */}
+             <Container maxWidth='lg'>
+                    <AboutMeGrid />
+                          </Container>
                 </motion.div>
-                {/* <AboutMe />{" "} */}
+           
         
         
             </main>

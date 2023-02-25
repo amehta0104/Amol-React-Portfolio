@@ -40,7 +40,7 @@ function ProjectPage() {
           }
         }>
       
- <ProjectHoverCard />
+<AllProjects />
         <GitHubCards />
         </Box>
       </div>

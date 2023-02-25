@@ -94,7 +94,7 @@ import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import theme from "../pages/theme";
 import "../index.css";
-
+import ButtonGroup from "@mui/material/ButtonGroup";
 function AllProjects() {
   const [data, setData] = useState([]);
 
@@ -110,12 +110,17 @@ function AllProjects() {
 
   return (
     <div className="wrapper">
-      <Container maxWidth="md">
+      <Container maxWidth="xl" sx={{}}>
         <Grid container spacing={2}>
+        <Grid item xs={12} sm={12} md={12} >
+                         <Typography variant="h4" paragraph  gutterBottom>
+                          Client Projects
+                        </Typography>
+                          </Grid>
           {data.map((project) => (
-            <Grid item xs={12} sm={6}  key={project.id}>
-              <Paper elevation={1} sx={{  padding: 0.3, backgroundColor: theme.palette.primary.main }}>
-                  <Card sx={{backgroundColor: theme.palette.primary.bg, color: theme.palette.primary.text, height: '100%'    }}
+            <Grid item xs={12} sm={6} md={6}  key={project.id}>
+              <Paper elevation={1} sx={{  padding: 0.225, backgroundColor: theme.palette.primary.main }}>
+                  <Card sx={{backgroundColor: theme.palette.primary.bg, color: theme.palette.primary.text, height: 400   }}
                     onClick={() => {
                       window.location.href = `/project-detail/${project.id}`;
                     }}
@@ -132,7 +137,7 @@ function AllProjects() {
                           {project.title}
                         </Typography>
                         <Typography variant="body2" component="p">
-                          {project.description.substring(0, 100)}
+                          {project.description.substring(0, 200)}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -148,6 +153,17 @@ function AllProjects() {
               </Paper>
             </Grid>
           ))}
+                       <Grid item xs={12} sx={{
+                            
+                          }} >
+                           
+                            
+                                <Button variant='text' href="/about" target="_blank" rel="noopener noreferrer" >
+                                  View All
+                                  </Button>
+                               
+
+                </Grid>
         </Grid>
       </Container>
     </div>

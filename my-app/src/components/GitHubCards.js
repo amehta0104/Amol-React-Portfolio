@@ -6,6 +6,9 @@ import { Grid } from "@mui/material";
 import { Container } from "@mui/material";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
+import { Paper } from "@mui/material";
+import { Button } from "@mui/material";
+import { ButtonGroup } from "@mui/material";
 class GitHubCards extends Component {
   state = {
     repos: []
@@ -42,11 +45,35 @@ class GitHubCards extends Component {
     return (
       
         <div class="wrapper">
-          <Container maxWidth="md" style={{ }}>
-            <Grid container spacing={2} sx={{ }} >
+          <Container maxWidth="xl" sx={{   display: 'flex',
+                    justifyContent: 'center',
+                          padding: 2,
+                    alignItems: 'center', 
+                   }}>
+              <Grid container spacing={2} sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                
+                    }} >
+            <Grid item xs={12} sm={12} md={12} >
+                         <Typography variant="h4" paragraph  gutterBottom>
+                          GitHub Projects
+                        </Typography>
+                          </Grid>
               {repos.map((data, i) => (
                 <RepoCard repo={data} key={i} />
               ))}
+                <Grid item xs={12} sx={{
+                            
+                          }} >
+                           
+                            
+                                <Button variant="text" href="/about" target="_blank" rel="noopener noreferrer" >
+                                  View All
+                                  </Button>
+                               
+                </Grid>
             </Grid>
           </Container>
         </div>
