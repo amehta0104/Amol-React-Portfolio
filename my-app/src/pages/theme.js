@@ -3,7 +3,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { orange, red } from '@mui/material/colors';
 import { grey} from '@mui/material/colors/'
-
+import { makeStyles, withStyles } from "@mui/styles";
+import { purple } from "@mui/material/colors";
 
 const theme = createTheme({
     
@@ -32,10 +33,7 @@ const theme = createTheme({
         fontSize: "2rem"
       }
     },
-    paper: {
-      backgroundColor: "#1E1E1E",
-      color: "#FFFFFF"
-    },
+    
     transitions: {
       easing: {
         // This is the most common easing curve.
@@ -65,4 +63,64 @@ const theme = createTheme({
     
   });
 
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      minWidth: 0,
+      marginTop: "10px",
+      marginBottom: "10px",
+     
+      justifyContent: "center",
+      alignItems: "center",
+     
+    },
+    paper: {
+      "&:hover": {
+        padding: "0.3em",
+        backgroundColor:  purple[500],
+      },
+      transition: "0.3s", 
+     padding: "0.225em",
+      backgroundColor:  theme.palette.primary.bg,
+     
+    },
+    card: {
+  
+      margin: "auto",
+     minWidth: "100%",
+      padding: "1em",
+      transition: "0.3s",
+  
+      borderRadius: ".625rem!important",
+      boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+      "&:hover": {
+        boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
+      },
+      // background: "#233044",
+      backgroundColor: theme.palette.primary.black,
+    },
+    title: {
+      "&:active": {
+        color: "#00008E",
+      },
+    },
+    cardContent: {
+      minHeight: "120px",
+      color: "#fff",
+    },
+    cardActions: {
+      padding: "16px",
+    },
+    avatar: {
+      color: theme.palette.getContrastText(purple[500]),
+      backgroundColor: purple[500],
+    },
+    dot: {
+      height: "12px",
+      width: "12px",
+      borderRadius: "50%",
+      display: "inline-block",
+    },
+  }));
+
     export default theme;
+    export   { useStyles };

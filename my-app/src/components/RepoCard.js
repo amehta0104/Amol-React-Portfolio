@@ -12,58 +12,11 @@ import {
   Avatar,
   Typography,
   Grid,
+  Badge,
 } from "@mui/material";
 import { purple } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    minWidth: 0,
-    marginTop: "10px",
-    marginBottom: "10px",
-   
-    justifyContent: "center",
-    alignItems: "center",
-   
-  },
-  card: {
-
-    margin: "auto",
-   minWidth: "100%",
-    padding: "1em",
-    transition: "0.3s",
-
-    borderRadius: ".625rem!important",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
-    "&:hover": {
-      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
-    },
-    // background: "#233044",
-    background: theme.palette.primary.black,
-  },
-  title: {
-    "&:active": {
-      color: "#00008E",
-    },
-  },
-  cardContent: {
-    minHeight: "120px",
-    color: "#fff",
-  },
-  cardActions: {
-    padding: "16px",
-  },
-  avatar: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
-  },
-  dot: {
-    height: "12px",
-    width: "12px",
-    borderRadius: "50%",
-    display: "inline-block",
-  },
-}));
+import {useStyles} from "../pages/theme";
 
 const RepoCard = ({ repo }) => {
   const classes = useStyles();
@@ -73,7 +26,7 @@ const RepoCard = ({ repo }) => {
         padding : 0 ,
         height: "100%",
       }} className={classes.root}>
-   <Paper elevation={3} sx={{  padding: 0.225, backgroundColor: purple[500],}}>
+   <Paper className={classes.paper} elevation={3} sx={{  padding: 0.225, }}>
        
             <Card className={classes.card}>
        
@@ -152,6 +105,8 @@ const RepoCard = ({ repo }) => {
                           </a>
                         </React.Fragment>
                       ) : null}
+                   <Badge badgeContent={repo.language} color="secondary" style={{marginLeft: "auto",}} />
+
                     </CardActions>
        
                 </Card>

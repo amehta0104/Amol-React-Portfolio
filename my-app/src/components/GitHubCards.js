@@ -9,6 +9,9 @@ import { Typography } from "@mui/material";
 import { Paper } from "@mui/material";
 import { Button } from "@mui/material";
 import { ButtonGroup } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import {useStyles} from "../pages/theme";
+
 class GitHubCards extends Component {
   state = {
     repos: []
@@ -16,68 +19,70 @@ class GitHubCards extends Component {
 
   async componentDidMount() {
     const api_key = process.env.REACT_APP_API_KEY;
-    const repos = [
-      'CMST488-AdvancedJS',
-      'Amol-React-Portfolio',
-      'PapaRebuild',
-      'CMST388',
-      'AmolPortfolio',
-      'CMST386',
-    ];
-
-    const repoData = await Promise.all(repos.map(async (repo) => {
-      const url = baseURL(repo);
-      const res = await Axios.get(url, {
-        headers: {
-          Authorization: `token ${api_key}`,
-        },
-      });
-      return res.data;
-    }));
-
+    const url = 'https://api.github.com/user/repos?type=all&sort=updated';
+    const repoData = await Axios.get(url, {
+      headers: {
+        Authorization: `token ${api_key}`,
+      },
+    });
     this.setState({
-      repos: repoData
+      repos: repoData.data
     });
   }
 
   render() {
     const { repos } = this.state;
+    const isHomePage = window.location.pathname === "/";
+    const displayedRepos = isHomePage ? repos.slice(0, 6) : repos;
+    
     return (
-      
-        <div class="wrapper">
-          <Container maxWidth="xl" sx={{   display: 'flex',
-                    justifyContent: 'center',
-                          padding: 2,
-                    alignItems: 'center', 
-                   }}>
-              <Grid container spacing={2} sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                
-                    }} >
+      <div class="wrapper">
+        <Container
+          maxWidth="lg"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            padding: 2,
+            alignItems: "center",
+          }}
+        >
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid item xs={12} sm={12} md={12}>
+              <Typography variant="h3" paragraph gutterBottom>
+                GitHub Projects
+              </Typography>
+            </Grid>
             <Grid item xs={12} sm={12} md={12} >
-                         <Typography variant="h4" paragraph  gutterBottom>
-                          GitHub Projects
+                         <Typography variant="body2" paragraph  gutterBottom>
+                          lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </Typography>
                           </Grid>
-              {repos.map((data, i) => (
-                <RepoCard repo={data} key={i} />
-              ))}
-                <Grid item xs={12} sx={{
-                            
-                          }} >
-                           
-                            
-                                <Button variant="text" href="/about" target="_blank" rel="noopener noreferrer" >
-                                  View All
-                                  </Button>
-                               
-                </Grid>
+            {displayedRepos.map((data, i) => (
+              <RepoCard repo={data} key={i} />
+            ))}
+            <Grid item xs={12} sx={{}}>
+            <Button
+  variant="text"
+  href="/projectpage"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{color: '#9A27AE',  display: displayedRepos.length < 7 ? "block" : "none" }}
+>
+  View All
+</Button>
+
             </Grid>
-          </Container>
-        </div>
-    
+          </Grid>
+        </Container>
+      </div>
     );
   }
 }

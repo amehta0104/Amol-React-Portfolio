@@ -95,9 +95,14 @@ import Paper from "@mui/material/Paper";
 import theme from "../pages/theme";
 import "../index.css";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import { makeStyles } from "@mui/styles";
+import purple from "@mui/material/colors/purple";
+
 function AllProjects() {
   const [data, setData] = useState([]);
 
+ 
+  
   useEffect(() => {
     loadData();
   }, []);
@@ -108,19 +113,34 @@ function AllProjects() {
     setData(data);
   };
 
+
+
   return (
     <div className="wrapper">
-      <Container maxWidth="xl" sx={{}}>
+      <Container maxWidth="lg" sx={{}}>
         <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={12} >
-                         <Typography variant="h4" paragraph  gutterBottom>
+                         <Typography variant="h3" paragraph  gutterBottom>
                           Client Projects
+                        </Typography>
+                          </Grid>
+                          <Grid item xs={12} sm={12} md={12} >
+                         <Typography variant="body2" paragraph  gutterBottom>
+                          lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </Typography>
                           </Grid>
           {data.map((project) => (
             <Grid item xs={12} sm={6} md={6}  key={project.id}>
-              <Paper elevation={1} sx={{  padding: 0.225, backgroundColor: theme.palette.primary.main }}>
-                  <Card sx={{backgroundColor: theme.palette.primary.bg, color: theme.palette.primary.text, height: 400   }}
+              <Paper sx={{
+                    "&:hover": {
+                      padding: "0.3em",
+                      backgroundColor:  theme.palette.primary.main,
+                    },
+                    transition: "0.3s", 
+                    padding: "0.225em",
+                    backgroundColor:  theme.palette.primary.bg,
+              }}  >
+                  <Card sx={{backgroundColor: theme.palette.primary.black, color: theme.palette.primary.text,    }}
                     onClick={() => {
                       window.location.href = `/project-detail/${project.id}`;
                     }}

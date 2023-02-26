@@ -14,7 +14,7 @@
 {
     "id": 2,
     "title" : "Sams Blog",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
+    "description": "For Sam's blog, the client had requested the development of a website that would enable them to post information about themselves, publish poems and blog posts. Furthermore, the client desired the website to have a space-themed design. To fulfill their requirements, I developed a customized theme using WordPress and deployed the website successfully.Subsequently, I continued to work on upgrading and adding features to the website for a year post its initial launch. The website caters to an account that writes on various topics such as travel, space, finance, and technology.",
     "link": "https://www.samsblog.com/",
     "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/samsblog.png"
@@ -32,7 +32,7 @@
 {
     "id": 4,
     "title" : "Closet Pioneers",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
+    "description": "For Closet Pioneers, I undertook the task of redesigning the theme and layout of their website. The previous website was outdated and poorly developed, which led to a lack of customer engagement and ultimately required the owner to reconsider their strategy. I worked closely with the client for a period of six months, testing ideas, layouts, and themes until we arrived at a satisfactory solution.Upon completion of the website redesign, the client observed a significant improvement in user retention, with a 25% increase, as well as a 15% increase in orders placed. Additionally, I took charge of running Facebook ad campaigns for the client for three months. During this time, I custom designed and deployed three different ads, which resulted in a total exposure to over 50,000 people, and the acquisition of 100 new referral orders. ",
     "link": "https://www.closetpioneers.com/",
     "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/closet.png"
