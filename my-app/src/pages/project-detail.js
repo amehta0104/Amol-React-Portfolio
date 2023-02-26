@@ -32,7 +32,7 @@ const getProjectById = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Axios.get("http://localhost:3000/projects.json")
+    Axios.get("http://191.96.31.250/projects.json")
       .then((response) => {
         setProject(response.data);
         setLoading(false);
