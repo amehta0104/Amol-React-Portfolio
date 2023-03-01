@@ -15,4 +15,4 @@ jobs:
         username: root
         password: Amoltheking123**
         source: "./*"
-        target: "/var/www/portfolio"
+        target: "/var/www/portfolio/"
