@@ -21,7 +21,7 @@ import { CssBaseline } from '@mui/material';
 
 import theme from './pages/theme';
 import Footer from './components/footer';
-import {AnimatePresence, motion } from 'framer-motion';
+import {AnimatePresence, motion } from 'framer-motion/dist/framer-motion';
 
 
 function App(router) {
