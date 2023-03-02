@@ -33,6 +33,7 @@ jobs:
            sudo npm i
            sudo npm run build
            sudo rm -rf /var/www/portfolio/*
+           sudo mkdir /var/www/portfolio/my-app
            sudo cp -r build/* /var/www/portfolio/my-app
            cd /var/www/portfolio
            sudo systemctl reload nginx
