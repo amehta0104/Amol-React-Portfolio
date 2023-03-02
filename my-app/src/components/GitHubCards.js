@@ -18,6 +18,7 @@ class GitHubCards extends Component {
   };
 
   componentDidMount() {
+    
     const api_key = process.env.REACT_APP_GITHUB_API_KEY;
     const url = 'https://api.github.com/user/repos?type=all&sort=updated';
     const repoData =  Axios.get(url, {
