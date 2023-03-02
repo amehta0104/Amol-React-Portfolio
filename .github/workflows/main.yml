@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            sudo rm -rf /root/portfolio/*
+            sudo rm -rf /root/portfolio
             git clone https://github.com/amehta0104/Amol-React-Portfolio.git /root/portfolio/
       - name: Delete existing files
         uses: appleboy/ssh-action@master
