@@ -17,8 +17,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            sudo rm -rf /root/Amol-React-Portfolio
-            git clone https://github.com/amehta0104/Amol-React-Portfolio.git /root/Amol-React-Portfolio
+            sudo rm -rf /root/portfolio/my-app
+            git clone https://github.com/amehta0104/Amol-React-Portfolio.git /root/portfolio/my-app/
       - name: Delete existing files
         uses: appleboy/ssh-action@master
         with:
@@ -26,13 +26,13 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-           cd /root/Amol-React-Portfolio
+           cd /root/portfolio/
            sudo apt install nodejs
            sudo apt install npm
-           cd /root/Amol-React-Portfolio/my-app
+           cd /root/portfolio/my-app/
            sudo npm i
            sudo npm run build
-           sudo rm -rf /var/www/portfolio/*
+           sudo rm -rf /var/www/portfolio/my-app
            sudo mkdir /var/www/portfolio/my-app
            sudo cp -r build/* /var/www/portfolio/my-app
            cd /var/www/portfolio
