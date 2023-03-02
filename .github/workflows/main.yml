@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete existing files
-        run: rm -rf /root/portfolio/*
+        run: sudo rm -rf /root/portfolio/*
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Copy code to server
