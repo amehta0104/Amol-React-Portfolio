@@ -17,7 +17,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            git clone https://github.com/amehta0104/Amol-React-Portfolio.git
+            sudo rm -rf /root/Amol-React-Portfolio
+            git clone https://github.com/amehta0104/Amol-React-Portfolio.git /root/Amol-React-Portfolio
       - name: Delete existing files
         uses: appleboy/ssh-action@master
         with:
@@ -27,6 +28,6 @@ jobs:
           script: |
            cd /root/Amol-React-Portfolio
            sudo apt install nodejs
-           apt install npm
+           sudo apt install npm
            cd /root/Amol-React-Portfolio/my-app
            sudo npm i
