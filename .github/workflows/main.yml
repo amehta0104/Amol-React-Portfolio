@@ -28,7 +28,7 @@ jobs:
           script: |
            cd /root/portfolio/
            sudo apt install nodejs
-           sudo apt install npm
+           sudo npm install 
            cd /root/portfolio/my-app/
            sudo npm i
            sudo npm run build
