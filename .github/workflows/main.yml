@@ -31,3 +31,6 @@ jobs:
            sudo apt install npm
            cd /root/Amol-React-Portfolio/my-app
            sudo npm i
+           sudo npm run build
+           sudo cp -r build/* /var/www/portfolio/my-app
+           
