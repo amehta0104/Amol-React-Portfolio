@@ -23,7 +23,7 @@ import { Image } from "@mui/icons-material";
 import theme from "./theme";
 import Grid from "@mui/material/Grid";
 // import {motion as m } from "framer-motion";
-import {AnimatePresence, motion} from "framer-motion"; 
+import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ProjectPage from "./projectpage";
 const getProjectById = () => {

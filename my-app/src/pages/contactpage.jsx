@@ -8,7 +8,7 @@ import MiniContact from '../components/mini-contact';
 import SocialBar from '../components/social-bar';
 import theme from '../pages/theme';
 import { Grid, Hidden } from '@mui/material';
-import {AnimatePresence, motion} from "framer-motion"; 
+import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
 
 export default function ContactPage(){
     const styles = {
