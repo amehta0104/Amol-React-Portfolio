@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -20,7 +20,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
     "babel-plugin-macros": "^3.1.0",
-    "framer-motion": "2.3.0",
+    "framer-motion": "10.0.1",
     "mdb-react-ui-kit": "^5.1.0",
     "motion": "^10.15.5",
     "react": "^18.2.0",
