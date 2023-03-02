@@ -14,7 +14,7 @@ import { Box } from "@mui/material";
 
 import ProjectHoverCard from "../components/project-hover-card";
 import Github from "../components/github";
-import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"; 
+
 import AllProjects from "../components/allprojects";
 import GitHubCards from "../components/GitHubCards";
 import emptyCache from "../components/emptyCache";

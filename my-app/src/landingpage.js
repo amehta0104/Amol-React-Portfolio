@@ -12,7 +12,7 @@ import AboutMe from "./pages/about";
 
 
 import Github from "./components/github";
-import {AnimatePresence, motion} from "framer-motion/dist/framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import { Container, Typography } from "@mui/material";
 import theme from "./pages/theme";
 import AboutMeGrid from "./components/aboutMeGrid";
