@@ -33,5 +33,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /root/portfolio
             git clone https://github.com/your-username/your-repo.git /root/portfolio
