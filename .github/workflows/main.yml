@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete existing files
-        run: sudo rm -rf /root/portfolio/*
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            sudo rm -rf /root/portfolio/*
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Copy code to server
@@ -20,6 +26,11 @@ jobs:
           source: "./*"
           target: "/root/portfolio"
       - name: Clone repository
-        run: |
-          sudo cd /root/portfolio
-          sudo git clone https://github.com/your-username/your-repo.git /root/portfolio
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /root/portfolio
+            git clone https://github.com/your-username/your-repo.git /root/portfolio
