@@ -16,7 +16,6 @@ jobs:
           script: |
             sudo rm -rf /root/portfolio/*
             sudo rm -rf /root/portfolio
-            sudo mkdir portfolio
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Copy code to server
