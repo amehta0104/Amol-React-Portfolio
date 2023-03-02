@@ -126,7 +126,7 @@ function AllProjects() {
                           </Grid>
                           <Grid item xs={12} sm={12} md={12} >
                          <Typography variant="body2" paragraph  gutterBottom>
-                          ff
+                          Websites built for clients.
                         </Typography>
                           </Grid>
           {data.map((project) => (
