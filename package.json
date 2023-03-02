@@ -8,7 +8,8 @@
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "mdb-react-ui-kit": "5.1.0"
+    "mdb-react-ui-kit": "5.1.0",
+    "framer-motion": "^4.1.17"
   },
   "scripts": {
     "start": "react-scripts start",
