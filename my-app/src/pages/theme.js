@@ -67,7 +67,7 @@ const theme = createTheme({
     root: {
       minWidth: 0,
       marginTop: "10px",
-      marginBottom: "10px",
+      marginBottom: "10px" ,
      
       justifyContent: "center",
       alignItems: "center",
