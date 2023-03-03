@@ -9,7 +9,7 @@ dist/
 *.zip
 
 # Ignore environment files
-.env
+# .env
 .env.local
 .env.*.local
 .env.production
