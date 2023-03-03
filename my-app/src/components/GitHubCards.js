@@ -12,19 +12,20 @@ import { ButtonGroup } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import {useStyles} from "../pages/theme";
 
+
 class GitHubCards extends Component {
   state = {
     repos: []
   };
 
   async componentDidMount() {
-    REACT_APP_GITHUB_API_KEY = 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
+
 
 
     const api_key = process.env.REACT_APP_GITHUB_API_KEY;
     const url = 'https://api.github.com/user/repos?type=all&sort=updated';
     const repoData = await Axios.get(url, {
-      Headers: {
+      headers: {
         Authorization: `token ${api_key}`,
       },
     });
