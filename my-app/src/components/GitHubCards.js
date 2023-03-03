@@ -24,12 +24,12 @@ class GitHubCards extends Component {
 
     const api_key = process.env.REACT_APP_GITHUB_API_KEY;
     const url = 'https://api.github.com/user/repos?type=all&sort=updated';
-    const repoData = await Axios.get(url, {
+    const repoData =  Axios.get(url, {
       headers: {
         Authorization: `token ${api_key}`,
       },
     });
-    this.setState({
+    await this.setState({
       repos: repoData.data
     });
   }
