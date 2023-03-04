@@ -108,7 +108,8 @@ function AllProjects() {
   }, []);
 
   const loadData = async () => {
-    const response = await fetch("http://191.96.31.250/projects.json");
+    // const response = await fetch("http://191.96.31.250/projects.json");
+    const response = await fetch("http://localhost:3000/projects.json");
     const data = await response.json();
     setData(data);
   };
@@ -125,8 +126,8 @@ function AllProjects() {
                         </Typography>
                           </Grid>
                           <Grid item xs={12} sm={12} md={12} >
-                         <Typography variant="body2" paragraph  gutterBottom>
-                          Websites built for clients.
+                         <Typography variant="subtitle1" paragraph  gutterBottom>
+                          Websites built for clients. Click on each project to see more details, or click the link to see the live site.
                         </Typography>
                           </Grid>
           {data.map((project) => (
@@ -140,7 +141,7 @@ function AllProjects() {
                     padding: "0.225em",
                     backgroundColor:  theme.palette.primary.bg,
               }}  >
-                  <Card sx={{backgroundColor: theme.palette.primary.black, color: theme.palette.primary.text,    }}
+                  <Card sx={{backgroundColor: theme.palette.primary.secondary, color: theme.palette.primary.text,    }}
                     onClick={() => {
                       window.location.href = `/project-detail/${project.id}`;
                     }}

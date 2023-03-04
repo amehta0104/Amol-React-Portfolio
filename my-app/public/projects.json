@@ -23,7 +23,7 @@
 {
     "id": 3,
     "title" : "Sentinel Home Services",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Curabitur venenatis, nulla ",
+    "description": "As a contracted web designer for Sentinel Home Services, I was tasked with revamping their outdated website. Their range of services included repairs, installations, and various housework tasks. Drawing inspiration from the client's military background, I utilized WordPress to create a visually-striking website with an army-style design. I improved the website's navigation, allowing potential customers to easily access information about all of their services. The end result was a transformed website that went from drab to fab, which led to immediate results: a 30% increase in sales and a 50% increase in traffic retention. ",
     "link": "https://www.sentinelhomeservices.com/",
     "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
     "image": "/assests/sentinel.png"
