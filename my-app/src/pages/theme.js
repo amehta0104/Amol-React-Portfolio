@@ -5,15 +5,16 @@ import { orange, red } from '@mui/material/colors';
 import { grey} from '@mui/material/colors/'
 import { makeStyles, withStyles } from "@mui/styles";
 import { purple } from "@mui/material/colors";
+import Global from '@mui/styled-engine-sc/GlobalStyles/GlobalStyles';
 
 const theme = createTheme({
     
     spacing: 10,
     palette: {
-      //mode: "dark",
+    //mode: "dark",
       primary: {
         main: "#3A8DF4",
-        bg: "#141414",
+        bg: "#151515",
         text: "#FFFFFF",
         secondary : "#3c3c3c54",
         black : "#111",
@@ -29,9 +30,19 @@ const theme = createTheme({
       }
     },
     typography: {
-      myVariant: {
+      heading: {
         fontSize: "2rem"
-      }
+      },
+      subheading: {
+        fontSize: "1.5rem"
+      },
+      cardTitle: {
+        fontSize: "1.2rem",
+      },
+
+      cardBody: {
+        fontSize: "1rem",
+      },
     },
     
     transitions: {
@@ -63,7 +74,7 @@ const theme = createTheme({
     
   });
 
-  const useStyles = makeStyles((theme) => ({
+ var useStyles = makeStyles(() => ({
     root: {
       minWidth: 0,
       marginTop: "10px",
@@ -93,10 +104,27 @@ const theme = createTheme({
       borderRadius: ".625rem!important",
       boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
       "&:hover": {
+        backgroundColor:  purple[500],
+        boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
+      },
+
+      backgroundColor: theme.palette.primary.black,
+    },
+    resumeCard: {
+  
+      margin: "auto",
+     minWidth: "100%",
+      padding: "1em",
+      transition: "0.3s",
+  
+      borderRadius: ".625rem!important",
+      boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+      "&:hover": {
+
         boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
       },
       // background: "#233044",
-      backgroundColor: theme.palette.primary.black,
+      backgroundColor: theme.palette.primary.black ,
     },
     title: {
       "&:active": {
@@ -122,5 +150,85 @@ const theme = createTheme({
     },
   }));
 
+  var styles = makeStyles(() => ({
+    root: {
+      minWidth: 0,
+      marginTop: "10px",
+      marginBottom: "10px" ,
+     
+      justifyContent: "center",
+      alignItems: "center",
+     
+    },
+    paper: {
+      "&:hover": {
+        padding: "0.3em",
+      
+      },
+      transition: "0.3s", 
+     padding: "0.225em",
+      backgroundColor:  theme.palette.primary.bg,
+     
+    },
+    card: {
+  
+      margin: "auto",
+     minWidth: "100%",
+      padding: "1em",
+      transition: "0.3s",
+  
+      borderRadius: ".625rem!important",
+      boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+      "&:hover": {
+        backgroundColor:  purple[500],
+        boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
+      },
+
+      backgroundColor: theme.palette.primary.black,
+    },
+    resumeCard: {
+  
+      margin: "auto",
+     minWidth: "100%",
+      padding: "1em",
+      transition: "0.3s",
+    
+      borderRadius: ".625rem!important",
+      boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+      "&:hover": {
+
+        boxShadow: "0 16px 40px -12.125px rgba(0,0,0,0.5)",
+        border : "0.5px solid #3A8DF4",
+      },
+      // background: "#233044",
+      backgroundColor: 'transparent' ,
+    },
+    title: {
+      color: '#eee',
+      fontSize: '1.2rem',
+      "&:active": {
+        color: "#eee",
+      },
+    },
+    cardContent: {
+      minHeight: "120px",
+      color: "#fff",
+    },
+    cardActions: {
+      padding: "16px",
+    },
+    avatar: {
+      color: theme.palette.getContrastText(purple[500]),
+      backgroundColor: purple[500],
+    },
+    dot: {
+      height: "12px",
+      width: "12px",
+      borderRadius: "50%",
+      display: "inline-block",
+    },
+  }));
+
     export default theme;
-    export   { useStyles };
+    export  { useStyles };
+   export { styles };

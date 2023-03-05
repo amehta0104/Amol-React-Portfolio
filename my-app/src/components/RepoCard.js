@@ -16,9 +16,9 @@ import {
 } from "@mui/material";
 import { purple } from "@mui/material/colors";
 import { makeStyles } from "@mui/styles";
-import {useStyles} from "../pages/theme";
+import {useStyles } from "../pages/theme";
 
-const RepoCard = ({ repo }) => {
+const RepoCard = ({ repo , i}) => {
   const classes = useStyles();
   return (
    
@@ -28,7 +28,9 @@ const RepoCard = ({ repo }) => {
       }} className={classes.root}>
    <Paper className={classes.paper} elevation={3} sx={{  padding: 0.225, }}>
        
-            <Card className={classes.card}>
+            <Card className={classes.card} sx={{
+              width: "100%",
+            }}>
        
                 <CardHeader
                   avatar={

@@ -11,7 +11,7 @@ export default function AboutMeGrid() {
     return (
 
             <div class="wrapper">
-                <Container maxWidth='xl' sx={{
+                <Container maxWidth='lg' sx={{
                     display: 'flex',
                     justifyContent: 'center',
                           padding: 2,
@@ -34,7 +34,7 @@ export default function AboutMeGrid() {
                           <img src="/assests/profilepic.png" alt='test' height={200} width={'100%'}/>
                           </Grid>
                           <Grid item xs={12} sm={12} md={12}>
-                          <Typography variant="body1">
+                          <Typography variant="body1" paragraph fontSize='1.1rem'>
                 As a key member of the Uniken team, I was responsible for a range of technical and
                 administrative tasks to ensure the smooth running of the company's website and IT
                 infrastructure. Using designs created by our designer, I built webpages using HTML,
@@ -58,7 +58,7 @@ export default function AboutMeGrid() {
                             
                           }} >
                            
-                            <ButtonGroup variant="outlined" aria-label="contained primary button group">
+                            <ButtonGroup variant="text" aria-label="contained primary button group">
                                 <Button href="/about" target="_blank" rel="noopener noreferrer" >Learn More</Button>
                                 <Button href="/contact" target="_blank" rel="noopener noreferrer" >Contact Me</Button>
                                 </ButtonGroup>

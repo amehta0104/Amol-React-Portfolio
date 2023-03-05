@@ -1,0 +1,154 @@
+{
+    "contact_information": {
+      "phone": "(571) 499 1097",
+      "email": "amolmehta0104@gmail.com",
+      "github": "https://github.com/amehta0104"
+    },
+    "summary": "Experienced and versatile web developer with proficiency in programming languages such as Python, HTML, CSS, Bootstrap, WordPress, and JavaScript, as well as operating systems including Linux (Kali Linux and Ubuntu), Windows, and Mac OS. Skilled in creating custom websites using CMS platforms, troubleshooting and maintaining servers, network architecture, and computer/server hardware installation and troubleshooting. Possess strong problem-solving and communication skills, leadership abilities, and ability to prioritize and multitask. Seeking a challenging role in a dynamic organization where I can utilize my skills and expertise to make a positive impact.",
+    "experience": [
+      {
+      
+        "title": "Data Center Technician",
+        "company": "ByteDance",
+        "start_date": "December 2022",
+        "end_date": "Present",
+        "highlights": [
+          "Used Linux commands to check host health, update firmware, perform OS install, flash motherboards, and check logs.",
+          "Helped set up new center with networking equipment.",
+          "Created SOPs for newly standardized procedures.",
+          "Installed equipment, developed documentation on innovative solutions, participated in site-level project work, and resolve complex problems within the data center space."
+        
+        ]
+      },
+      
+  
+      
+      {
+        "title": "Freelance Web Developer",
+        "company": "Self-employed",
+        "start_date": "July 2021",
+        "end_date": "Present",
+        "highlights": [
+          "Collaborate with clients to gather project ideas and document requirements",
+          "Offer proactive and innovative solutions to challenges.",
+          "Design and deploy custom websites using CMS platforms for small businesses and individuals",
+          "Create responsive web designs.",
+          "Plan projects, meet objectives, develop contingency plans, and create schedules",
+          "Possess knowledge of front-end architecture for applications"
+        ]
+      },
+      {
+        "title": "Contractor/ IT Technician",
+        "company": "Tekdash",
+        "start_date": "March 2020",
+        "end_date": "July 2021",
+        "highlights": [
+          "Designed and deployed custom websites using CMS platforms for small businesses.",
+          "Deployed compliance software (azure), set up user profiles and SSO, and transferred corporate emails and domains from google to outlook for small businesses.",
+          "Communicated directly with clients, provided solutions, and developed SOPs for current and future work.",
+          "Troubleshooted a myriad of technical issues for clients, and provided solutions based on each client's personal needs."
+        ]
+      },
+      {
+        "title": "Data Center Technician",
+        "company": "Amazon Web Services",
+        "start_date": "June 2019",
+        "end_date": "December 2019",
+        "highlights": [
+          "Troubleshooted AWS servers using host information, Linux commands, and physical maintenance",
+          "Utilized ticketing system to retrieve host information and diagnose problems with host hardware and software",
+          "Conducted in-depth hardware and network diagnostics on highly secure and confidential client servers.",
+          "Used AWS Linux commands to update firmware, reset network connections for intranet use, and update data about the server in the database",
+          "Installed equipment, developed documentation on innovative solutions, participated in site-level project work, and resolved complex problems within the data center space"
+        ]
+      },
+      {
+        "title": "Geek Squad Agent",
+        "company": "Best Buy",
+        "location": "Various locations",
+        "start_date": "June 2018",
+        "end_date": "June 2019",
+     
+    
+        "highlights": [
+            "Provided technical support and troubleshooting for various consumer electronics such as computers, mobile devices, and home theater systems.",
+            "Diagnosed and repaired hardware and software issues, performed installations and upgrades, and educated customers on how to use their technology effectively.",
+            "Provided excellent customer service and maintained a high level of professionalism at all times."
+        ]
+      }
+    ],
+
+    "projects" : [
+        {
+            "title": "Portfolio Website",
+            "description": "A portfolio website that showcases my skills and experience.",
+            "url": " https://amehta0104.github.io/Portfolio-Website/",
+            "highlights": [
+                "Used HTML, CSS, and Bootstrap to create a responsive website.",
+                "Used JavaScript to create a contact form that sends an email to my email address."
+            ]
+        }
+         
+      ],
+
+      
+    "education": [
+        {
+         
+
+            "title": "B.S. in Web Design and Development (in progress)",
+            "school": "University of Maryland Global Campus",
+            "start_date": "Class of 2022 (current)",
+            "studyType": "B.S Web Design and Development",
+          "area": "Computer Science",
+            "end_date": "Class of 2022 (current)",
+            "highlights": [
+                "In progress"
+            ]
+        },
+
+        {
+            "title": "A.S. in Computer Science",
+            "school": "Northern Virginia Community College",
+            "start_date": "Class of 2020",
+            "end_date": "Class of 2020",
+            "studyType": "A.S Computer Science",
+            "area": "Computer Science",
+            "highlights": [
+                "Graduated with a 3.8 GPA"
+            ]
+        }
+    ],
+
+    "skills": [
+        "Python",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "WordPress",
+        "JavaScript",
+        "Linux (Kali Linux and Ubuntu)",
+        "Windows",
+        "Mac OS",
+        "CMS Platforms",
+        "Servers",
+        "Network Architecture",
+        "Computer/Server Hardware Installation and Troubleshooting",
+        "Problem-Solving",
+        "Communication",
+        "Leadership",
+        "Prioritization",
+        "Multitasking"
+    ]
+    
+
+}
+
+
+
+
+
+
+
+
+

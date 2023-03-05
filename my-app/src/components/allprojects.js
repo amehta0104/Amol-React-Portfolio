@@ -109,7 +109,7 @@ function AllProjects() {
 
   const loadData = async () => {
     // const response = await fetch("http://191.96.31.250/projects.json");
-    const response = await fetch("http://localhost:3000/projects.json");
+    const response = await fetch("http://localhost:3001/projects.json");
     const data = await response.json();
     setData(data);
   };
