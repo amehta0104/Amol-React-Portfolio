@@ -112,12 +112,12 @@ class GitHubCards extends Component {
   };
 
   async componentDidMount() {
-    const api_key = process.env.REACT_APP_GITHUB_API_KEY;
-    const url = "https://api.github.com/user/repos?type=all&sort=updated";
+   // const api_key = process.env.REACT_APP_GITHUB_API_KEY;
+    const url = "http://api.amol.cc/api/github";
     const repoData = await Axios.get(url, {
-      headers: {
-        Authorization: `token ${api_key}`,
-      },
+      // headers: {
+      //   Authorization: `token ${api_key}`,
+      // },
     });
     this.setState({
       repos: repoData.data,
@@ -140,42 +140,29 @@ class GitHubCards extends Component {
 
   render() {
     const { repos, currentIndex } = this.state;
-    const isHomePage = window.location.pathname === "/";
-    const displayedRepos = isHomePage ? repos.slice(currentIndex, currentIndex + 3) : repos;
-
+    // const isHomePage = window.location.pathname === "/";
+    const displayedRepos =  repos.slice(currentIndex, currentIndex + 3);
     return (
       <div class="wrapper">
         <Container
           maxWidth="lg"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            padding: 2,
-            alignItems: "center",
-          }}
+         
         >
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              overflowX: "hidden",
-              position: "relative",
-            }}
+          <Grid container spacing={2}
+           
           >
-                 <Grid item xs={12} sx={{
+            <Grid item xs={12} sx={{
               display: "flex",
+
               justifyContent: "center",
               alignItems: "center",
-              padding: 0,
-            }}>
-              <Typography variant="h3" paragraph gutterBottom>
-                GitHub Projects
+              
+            }} >
+              <Typography variant="h3" paragraph  gutterBottom>
+                GitHub Repos
               </Typography>
             </Grid>
-            <Grid item xs={6} sx={{
+            <Grid item xs={6}  sx={{
               display: "flex",
               justifyContent: "flex-start",
               alignItems: "center",
@@ -189,7 +176,7 @@ class GitHubCards extends Component {
             </Grid>
        
 
-            <Grid item xs={6} sx={{
+            <Grid item xs={6}  sx={{
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",

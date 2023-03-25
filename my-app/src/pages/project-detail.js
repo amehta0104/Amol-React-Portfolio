@@ -34,7 +34,7 @@ const getProjectById = () => {
 
 
   React.useEffect(() => {
-    Axios.get("/projects.json")
+    Axios.get("http://localhost:3000/api/resume/projects")
       .then((response) => {
         setProject(response.data);
         setLoading(false);
@@ -160,15 +160,15 @@ const ProjectDetail = () => {
               id="reload"
             >
               <Container
-                maxWidth="lg"
+                
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: theme.palette.background.bg,
-                  margin: "1em",
-                  minHeight: "100vh",
+              
+                  
                 }}
               >
                 <Grid container spacing={5}>

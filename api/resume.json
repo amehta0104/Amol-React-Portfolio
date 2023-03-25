@@ -78,18 +78,7 @@
       }
     ],
 
-    "projects" : [
-        {
-            "title": "Portfolio Website",
-            "description": "A portfolio website that showcases my skills and experience.",
-            "url": " https://amehta0104.github.io/Portfolio-Website/",
-            "highlights": [
-                "Used HTML, CSS, and Bootstrap to create a responsive website.",
-                "Used JavaScript to create a contact form that sends an email to my email address."
-            ]
-        }
-         
-      ],
+
 
       
     "education": [
@@ -139,7 +128,81 @@
         "Leadership",
         "Prioritization",
         "Multitasking"
-    ]
+    ],
+
+    "projects" : [
+        {
+            "id": 1,
+            "title": "Portfolio Website",
+           
+            "description": "A portfolio website that showcases my skills and experience. Built with react, and pulls all dynamically from my node backend.",
+            "url": " https://amehta0104.github.io/Portfolio-Website/",
+            "apps": ["html", "css", "bootstrap", "javascript"],
+            "image": "/assests/portfolio.png",
+            "highlights": [
+                "Used HTML, CSS, and Bootstrap to create a responsive website.",
+                "Used JavaScript to create a contact form that sends an email to my email address."
+            ]
+        }, 
+
+        {
+          "id": 2,
+          "title" : "Uniken",
+          "description": "As a key member of the Uniken team, I was responsible for a range of technical and administrative tasks to ensure the smooth running of the company's website and IT infrastructure. Using designs created by our designer, I built webpages using HTML, CSS, PHP, and WordPress, ensuring that they were optimized for performance, security, and user experience.I was also responsible for maintaining databases, creating and deleting tables, and archiving current materials in Hubspot, ensuring that our data was up-to-date and well-organized. Additionally, I set up and maintained all routing and DNS for the website, ensuring that it was always accessible to our clients and customers. Working closely with the marketing team, I helped to develop and execute new materials for promotions, ensuring that our messaging was consistent, compelling, and effective. As the overall IT administrator, I was responsible for doing a little bit of everything, from troubleshooting technical issues to managing software licenses and IT equipment.Throughout my time at Uniken, I demonstrated a strong commitment to excellence, collaboration, and customer service, working closely with my colleagues to ensure that our website and IT infrastructure were always performing at their best.",
+          "link": "https://www.uniken.com/",
+          "apps": ["wordpress", "html", "css", "php"],
+          "image": "/assests/uniken.png",
+          "highlights": [
+            "Used HTML, CSS, and Bootstrap to create a responsive website.",
+            "Used JavaScript to create a contact form that sends an email to my email address."
+        ]
+         
+      },
+      
+      {
+          "id": 3,
+          "title" : "Sams Blog",
+          "description": "For Sam's blog, the client had requested the development of a website that would enable them to post information about themselves, publish poems and blog posts. Furthermore, the client desired the website to have a space-themed design. To fulfill their requirements, I developed a customized theme using WordPress and deployed the website successfully.Subsequently, I continued to work on upgrading and adding features to the website for a year post its initial launch. The website caters to an account that writes on various topics such as travel, space, finance, and technology.",
+          "link": "https://www.samsblog.com/",
+          "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
+          "image": "/assests/samsblog.png",
+          "highlights": [
+            "Used HTML, CSS, and Bootstrap to create a responsive website.",
+            "Used JavaScript to create a contact form that sends an email to my email address."
+        ]
+
+      },
+      
+      {
+          "id": 4,
+          "title" : "Sentinel Home Services",
+          "description": "As a contracted web designer for Sentinel Home Services, I was tasked with revamping their outdated website. Their range of services included repairs, installations, and various housework tasks. Drawing inspiration from the client's military background, I utilized WordPress to create a visually-striking website with an army-style design. I improved the website's navigation, allowing potential customers to easily access information about all of their services. The end result was a transformed website that went from drab to fab, which led to immediate results: a 30% increase in sales and a 50% increase in traffic retention. ",
+          "link": "https://www.sentinelhomeservices.com/",
+          "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
+          "image": "/assests/sentinel.png",
+          "highlights": [
+            "Used HTML, CSS, and Bootstrap to create a responsive website.",
+            "Used JavaScript to create a contact form that sends an email to my email address."
+        ]
+      },
+      
+      {
+          "id": 5,
+          "title" : "Closet Pioneers",
+          "description": "For Closet Pioneers, I undertook the task of redesigning the theme and layout of their website. The previous website was outdated and poorly developed, which led to a lack of customer engagement and ultimately required the owner to reconsider their strategy. I worked closely with the client for a period of six months, testing ideas, layouts, and themes until we arrived at a satisfactory solution.Upon completion of the website redesign, the client observed a significant improvement in user retention, with a 25% increase, as well as a 15% increase in orders placed. Additionally, I took charge of running Facebook ad campaigns for the client for three months. During this time, I custom designed and deployed three different ads, which resulted in a total exposure to over 50,000 people, and the acquisition of 100 new referral orders. ",
+          "link": "https://www.closetpioneers.com/",
+          "apps": ["wordpress", "faHtml5", "faJs", "faCss3Alt"],
+          "image": "/assests/closet.png",
+          "highlights": [
+            "Used HTML, CSS, and Bootstrap to create a responsive website.",
+            "Used JavaScript to create a contact form that sends an email to my email address."
+        ]
+      }
+      
+      
+         
+      ]
+
     
 
 }

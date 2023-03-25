@@ -58,10 +58,38 @@ export default function AboutMeGrid() {
                             
                           }} >
                            
+                        {/* /* if one home page, show button group. if on about page, hide button group  */}
+                        {window.location.pathname === "/" ? (
                             <ButtonGroup variant="text" aria-label="contained primary button group">
                                 <Button href="/about" target="_blank" rel="noopener noreferrer" >Learn More</Button>
                                 <Button href="/contact" target="_blank" rel="noopener noreferrer" >Contact Me</Button>
                                 </ButtonGroup>
+                        ) : (
+                            <div></div>
+                        )} 
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            {/* <ButtonGroup variant="text" aria-label="contained primary button group">
+                                <Button href="/about" target="_blank" rel="noopener noreferrer" >Learn More</Button>
+                                <Button href="/contact" target="_blank" rel="noopener noreferrer" >Contact Me</Button>
+                                </ButtonGroup> */}
 
                 </Grid>
                 

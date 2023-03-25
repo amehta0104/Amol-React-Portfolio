@@ -29,7 +29,7 @@ function AboutMePage() {
   }, []);
 
   const fetchResume = async () => {
-    const response = await fetch('http://localhost:3000/api/resume');
+    const response = await fetch('http://amol.cc:3000/api/resume');
     const data = await response.json();
     setData(data);
     
@@ -138,8 +138,8 @@ function AboutMePage() {
               </CardContent>
             </div>
           </Grid>
-          <Grid item xs={6}>
-            <Card sx={{
+          <Grid item xs={12}>
+            <div sx={{
               bgcolor: 'transparent',
             }} className={style.resumeCard}>
               <CardHeader className={style.title} title="Projects" />
@@ -167,7 +167,7 @@ function AboutMePage() {
                   </div>
                   ))}
                   </CardContent>
-                  </Card>
+                  </div>
                   </Grid>
       
                   </Grid>

@@ -33,8 +33,8 @@ function ProjectPage() {
       
       
             boxShadow: 1,
-            p: 2,
-            m: 2,
+            p: 1,
+         
       
             display: 'block',
           }
