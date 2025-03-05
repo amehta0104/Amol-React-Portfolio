@@ -34,7 +34,7 @@ const getProjectById = () => {
 
 
   React.useEffect(() => {
-    Axios.get("http://localhost:3000/api/resume/projects")
+    Axios.get("http://api.amol.cc/api/resume/projects")
       .then((response) => {
         setProject(response.data);
         setLoading(false);
